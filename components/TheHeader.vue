@@ -1,7 +1,7 @@
 <template>
   <header>
     <nuxt-link to="/" class="logo-wrapper">
-      <img class="w-16" src="@/assets/icons/logo.png" alt="Logo" />
+      <img class="w-16" src="@/assets/logo.png" alt="Logo" />
     </nuxt-link>
     <nav>
       <ul>
@@ -30,15 +30,19 @@ export default {
     return {
       links: [
         {
-          name: 'New',
+          name: 'Home',
           slug: 'index'
         },
         {
-          name: 'Top',
-          slug: 'top'
+          name: 'Nuxt',
+          slug: 'nuxt'
         },
         {
-          name: 'My Articles',
+          name: 'featured',
+          slug: 'featured'
+        },
+        {
+          name: 'My-Articles',
           slug: 'username',
           params: 'afreddier'
         }
@@ -65,7 +69,7 @@ header {
     ul {
       display: flex;
       li {
-        margin: 0 0.5rem;
+        margin: 0 0.2rem;
         a {
           box-shadow: $small-shadow;
           padding: 0.25rem 1rem;
