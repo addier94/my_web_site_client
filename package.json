@@ -1,0 +1,35 @@
+{
+  "name": "nuxt-dev-to-clone",
+  "version": "1.0.0",
+  "description": "Dev.to clone with NuxtJS",
+  "author": "Sergey Bedritsky",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "nuxt": "^2.12.2",
+    "nuxt-ackee": "^2.0.0",
+    "vue-content-placeholders": "^0.2.1",
+    "vue-observe-visibility": "^0.4.6"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^3.0.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/svg": "^0.1.11",
+    "@nuxtjs/tailwindcss": "^3.2.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-nuxt": ">=1.0.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2"
+  }
+}
