@@ -56,7 +56,7 @@ export default {
   },
   async fetch() {
     const articles = await fetch(
-      `https://dev.to/api/articles?tag=nuxt&state=rising&page=${this.currentPage}`
+      `https://dev.to/api/articles?page=${this.currentPage}`
     ).then((res) => res.json())
 
     this.articles = this.articles.concat(articles)
@@ -70,7 +70,7 @@ export default {
   methods: {
     lazyLoadArticles(isVisible) {
       if (isVisible) {
-        if (this.currentPage < 5) {
+        if (this.currentPage < 15) {
           this.currentPage++
           this.$fetch()
         }

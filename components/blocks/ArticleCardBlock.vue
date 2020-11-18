@@ -166,14 +166,21 @@ article {
         font-size: $text-sm;
         font-weight: $bold-body-font-weight;
         line-height: 1;
+        margin: 0.25rem;
         padding: 0.5rem 0.5rem;
-        // margin: 0 0.5rem 0.5rem 0;
         border-radius: 0.25rem;
         box-shadow: $small-shadow;
         &:hover {
+          color: $primary-color;
           background: $hovered-surface-color;
         }
+        &.nuxt-link-exact-active {
+          color: $primary-color;
+          background: transparent;
+          box-shadow: $small-inner-shadow;
+        }
         &:active {
+          color: $primary-color;
           background: transparent;
           box-shadow: $small-inner-shadow;
         }

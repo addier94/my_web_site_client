@@ -45,6 +45,14 @@ export default {
           name: 'My-Articles',
           slug: 'username',
           params: 'afreddier'
+        },
+        {
+          name: 'Articles',
+          slug: 'article'
+        },
+        {
+          name: 'allTags',
+          slug: 'alltags'
         }
       ]
     }

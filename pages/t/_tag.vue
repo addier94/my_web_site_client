@@ -82,7 +82,7 @@ export default {
   methods: {
     lazyLoadArticles(isVisible) {
       if (isVisible) {
-        if (this.currentPage < 5) {
+        if (this.currentPage < 15) {
           this.currentPage++
           this.$fetch()
         }
