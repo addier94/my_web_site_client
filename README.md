@@ -1,11 +1,3 @@
-# Dev.to clone built with NuxtJS
-
-> An articles aggregation app using [DEV.TO](https://dev.to) public [API](https://docs.dev.to/api/), demonstrating capabilities of [NuxtJS](https://nuxtjs.org) new [fetch()](https://nuxtjs.org/api/pages-fetch)
-
-See [live mode](https://dev-clone.nuxtjs.app/).
-
-[![Edit dev-to-clone-nuxt](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/bdrtsky/nuxt-dev-to-clone/tree/master/?fontsize=14&hidenavigation=1&theme=dark)
-
 ## What You’ll Learn
 
 - use `$fetchState` for showing nice placeholders while data is fetching on the client side
@@ -22,7 +14,7 @@ See [live mode](https://dev-clone.nuxtjs.app/).
 
 ```sh
 # clone the project
-git clone https://github.com/bdrtsky/nuxt-dev-to-clone.git
+git clone https://github.com/afreddier/consumingdevapi
 
 # install dependencies
 npm install
@@ -32,9 +24,3 @@ npm run dev
 
 # go to http://localhost:3000
 ```
-
-Read full article: https://nuxtjs.org/blog/build-dev-to-clone-with-nuxt-new-fetch
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bdrtsky/nuxt-dev-to-clone/master/static/demo.gif">
-</p>

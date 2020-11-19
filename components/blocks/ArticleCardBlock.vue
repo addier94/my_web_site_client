@@ -10,7 +10,7 @@
     >
       <div class="absolute top-0 right-0 z-10 text-white">
         <span class="time-publish-post">
-          <span class="font-medium">{{ getPublishMonth }}</span>
+          <span class="font-medium">{{ article.readable_publish_date }}</span>
           <span class="font-bold tracking-tighter">{{ getPublishDate }}</span>
         </span>
       </div>
@@ -91,9 +91,6 @@ export default {
     }
   },
   computed: {
-    getPublishMonth() {
-      return this.article.readable_publish_date.split(' ')[0]
-    },
     getPublishDate() {
       // make question if exist  date in edited_at
       if (this.article.edited_at !== null) {

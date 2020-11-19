@@ -34,25 +34,13 @@ export default {
           slug: 'index'
         },
         {
-          name: 'Nuxt',
-          slug: 'nuxt'
-        },
-        {
-          name: 'featured',
-          slug: 'featured'
+          name: 'Articles',
+          slug: 'article'
         },
         {
           name: 'My-Articles',
           slug: 'username',
           params: 'afreddier'
-        },
-        {
-          name: 'Articles',
-          slug: 'article'
-        },
-        {
-          name: 'allTags',
-          slug: 'alltags'
         }
       ]
     }

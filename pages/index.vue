@@ -1,8 +1,5 @@
 <template>
-  <div class="page-wrapper">
-    fuckug
-    <p>anothr</p>
-  </div>
+  <div class="page-wrapper">index page</div>
 </template>
 
 <script>
