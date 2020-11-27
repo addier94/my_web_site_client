@@ -2,10 +2,12 @@
   <article>
     <nuxt-link
       class="image-wrapper cursor-pointer"
-      :to="{
-        name: 'username-article',
-        params: { username: article.user.username, article: article.id }
-      }"
+      :to="
+        localePath({
+          name: 'username-article',
+          params: { username: article.user.username, article: article.id }
+        })
+      "
       tag="div"
     >
       <div class="absolute top-0 right-0 z-10 text-white">
@@ -24,20 +26,24 @@
     <div class="content">
       <div class="meta text-xs flex items-center mb-2">
         <nuxt-link
-          :to="{
-            name: 'username',
-            params: { username: article.user.username }
-          }"
+          :to="
+            localePath({
+              name: 'username',
+              params: { username: article.user.username }
+            })
+          "
           class="mr-1"
         >
           <img class="rounded-full w-10" :src="article.user.profile_image_90" />
         </nuxt-link>
         <div>
           <nuxt-link
-            :to="{
-              name: 'username',
-              params: { username: article.user.username }
-            }"
+            :to="
+              localePath({
+                name: 'username',
+                params: { username: article.user.username }
+              })
+            "
             class="user-name text-base"
             >{{ article.user.name }}</nuxt-link
           >
@@ -54,10 +60,12 @@
         </div>
       </div>
       <nuxt-link
-        :to="{
-          name: 'username-article',
-          params: { username: article.user.username, article: article.id }
-        }"
+        :to="
+          localePath({
+            name: 'username-article',
+            params: { username: article.user.username, article: article.id }
+          })
+        "
       >
         <h1>{{ article.title }}</h1>
       </nuxt-link>
@@ -65,7 +73,7 @@
         <nuxt-link
           v-for="tag in article.tag_list"
           :key="tag"
-          :to="{ name: 't-tag', params: { tag } }"
+          :to="localePath({ name: 't-tag', params: { tag } })"
           class="tag"
         >
           #{{ tag }}

@@ -1,5 +1,5 @@
+import { I18N } from './config'
 export default {
-  mode: 'universal',
   head: {
     title: 'Dev.to clone with NuxtJS',
     meta: [
@@ -25,22 +25,25 @@ export default {
     '~/assets/styles/reset.scss',
     '~/assets/styles/base.scss',
     '~/assets/styles/highlight.scss',
-    '~/assets/styles/app.scss'
+    '~/assets/styles/app.scss',
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   styleResources: {
     scss: ['~/assets/styles/tokens.scss']
   },
   plugins: [
     '~/plugins/vue-placeholders.js',
-    '~/plugins/vue-observe-visibility.client.js'
+    '~/plugins/vue-observe-visibility.client.js',
+    '~/plugins/fontawesome.js',
+    '~/plugins/tooltip.js'
   ],
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/svg',
     '@nuxtjs/style-resources',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
   ],
-  modules: ['nuxt-ackee'],
+  modules: ['nuxt-ackee', ['nuxt-i18n', I18N]],
   ackee: {
     server: 'https://ackee.nuxtjs.com',
     domainId: '6336379b-8d3e-4069-9d2e-897be6a7ed4e'

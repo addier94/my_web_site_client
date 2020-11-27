@@ -18,44 +18,54 @@
     <template v-else>
       <nuxt-link
         class="username-heading"
-        :to="{
-          name: 'username',
-          params: { username: user.username }
-        }"
+        :to="
+          localePath({
+            name: 'username',
+            params: { username: user.username }
+          })
+        "
         tag="div"
       >
         <nuxt-link
-          :to="{
-            name: 'username',
-            params: { username: user.username }
-          }"
+          :to="
+            localePath({
+              name: 'username',
+              params: { username: user.username }
+            })
+          "
         >
           <img :src="user.profile_image" :alt="user.name" />
         </nuxt-link>
         <div class="text">
           <nuxt-link
-            :to="{
-              name: 'username',
-              params: { username: user.username }
-            }"
+            :to="
+              localePath({
+                name: 'username',
+                params: { username: user.username }
+              })
+            "
           >
             <span>{{ user.name }}</span>
           </nuxt-link>
           <nuxt-link
-            :to="{
-              name: 'username',
-              params: { username: user.username }
-            }"
+            :to="
+              localePath({
+                name: 'username',
+                params: { username: user.username }
+              })
+            "
           >
             <span>@{{ user.username }}</span>
           </nuxt-link>
         </div>
       </nuxt-link>
       <nuxt-link
-        :to="{
-          name: 'username',
-          params: { username: user.username }
-        }"
+        :to="
+          localePath({
+            name: 'username',
+            params: { username: user.username }
+          })
+        "
         class="f-button"
       >
         See profile

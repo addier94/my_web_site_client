@@ -3,10 +3,12 @@
     <div class="card">
       <div class="profile">
         <nuxt-link
-          :to="{
-            name: 'username',
-            params: { username: comment.user.username }
-          }"
+          :to="
+            localePath({
+              name: 'username',
+              params: { username: comment.user.username }
+            })
+          "
           class="inner-link"
         >
           <img :src="comment.user.profile_image_90" :alt="comment.user.name" />

@@ -17,6 +17,9 @@
       <inline-error-block :error="$fetchState.error" />
     </template>
     <template v-else>
+      <div>
+        <routing-articles />
+      </div>
       <div class="article-cards-wrapper">
         <article-card-block
           v-for="(article, i) in articles"
@@ -47,6 +50,7 @@
 
 <script>
 import ArticleCardBlock from '@/components/blocks/ArticleCardBlock'
+import RoutingArticles from '@/components/blocks/RoutingArticles'
 import InlineErrorBlock from '@/components/blocks/InlineErrorBlock'
 
 function capitalize(str) {
@@ -56,7 +60,8 @@ function capitalize(str) {
 export default {
   components: {
     ArticleCardBlock,
-    InlineErrorBlock
+    InlineErrorBlock,
+    RoutingArticles
   },
   async fetch() {
     const articles = await fetch(

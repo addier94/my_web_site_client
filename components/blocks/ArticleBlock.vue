@@ -17,7 +17,7 @@
           <nuxt-link
             v-for="tag in article.tags"
             :key="tag"
-            :to="{ name: 't-tag', params: { tag } }"
+            :to="localePath({ name: 't-tag', params: { tag } })"
             class="tag"
           >
             #{{ tag }}

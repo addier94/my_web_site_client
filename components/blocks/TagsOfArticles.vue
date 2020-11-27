@@ -1,8 +1,8 @@
 <template>
   <nuxt-link
-    :to="{ name: 't-tag', params: { tag: tag.name } }"
+    :to="localePath({ name: 't-tag', params: { tag: tag.name } })"
     class="tag"
-    v-bind:style="{ background: tag.bg_color_hex, color: tag.text_color_hex }"
+    :style="{ background: tag.bg_color_hex, color: tag.text_color_hex }"
   >
     #{{ tag.name }}
   </nuxt-link>

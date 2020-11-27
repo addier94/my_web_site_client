@@ -8,14 +8,14 @@
         :level="0"
       />
     </ul>
-    <a
+    <!-- <a
       :href="addCommentLink"
       target="_blank"
       rel="nofollow noopener noreferer"
       class="add-comment"
     >
       Add comment
-    </a>
+    </a> -->
   </div>
 </template>
 
@@ -37,14 +37,14 @@ export default {
     return {
       comments: []
     }
-  },
-  computed: {
-    addCommentLink() {
-      const { slug } = this.$store.state.currentArticle || {}
-
-      return `https://dev.to/${this.$route.params.username}/${slug}`
-    }
   }
+  // computed: {
+  //   addCommentLink() {
+  //     const { slug } = this.$store.state.currentArticle || {}
+
+  //     return `https://dev.to/${this.$route.params.username}/${slug}`
+  //   }
+  // }
 }
 </script>
 

@@ -8,13 +8,15 @@
         <li v-for="link in links" :key="link.slug">
           <nuxt-link
             v-if="typeof link.params !== 'string'"
-            :to="{ name: link.slug }"
+            :to="localePath({ name: link.slug })"
           >
             {{ link.name }}
           </nuxt-link>
           <nuxt-link
             v-else
-            :to="{ name: link.slug, params: { username: link.params } }"
+            :to="
+              localePath({ name: link.slug, params: { username: link.params } })
+            "
           >
             {{ link.name }}
           </nuxt-link>
@@ -34,13 +36,13 @@ export default {
           slug: 'index'
         },
         {
-          name: 'Articles',
-          slug: 'article'
-        },
-        {
-          name: 'My-Articles',
+          name: 'My Articles',
           slug: 'username',
           params: 'afreddier'
+        },
+        {
+          name: 'Articles',
+          slug: 'article'
         }
       ]
     }
@@ -50,7 +52,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  @apply max-w-screen-xl m-auto p-4 h-24 flex items-center justify-between;
+  @apply max-w-screen-xl m-auto p-4 h-24 flex items-center justify-between relative z-50;
   .logo-wrapper {
     margin: 0 0.5rem;
     svg {
@@ -63,12 +65,12 @@ header {
     font-weight: $display-font-weight;
     text-transform: uppercase;
     ul {
-      display: flex;
+      @apply flex flex-wrap;
       li {
-        margin: 0 0.2rem;
+        margin: 0.3rem;
         a {
           box-shadow: $small-shadow;
-          padding: 0.25rem 1rem;
+          padding: 0.25rem 0.6rem;
           border-radius: 0.5rem;
           // user-select: none;
           &:hover {

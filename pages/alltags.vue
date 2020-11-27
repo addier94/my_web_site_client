@@ -37,20 +37,6 @@ export default {
     InlineErrorBlock,
     RoutingArticles
   },
-  computed: {
-    queryTags() {
-      if (this.searchQuery) {
-        return this.tags.filter((item) => {
-          return this.searchQuery
-            .toLowerCase()
-            .split(' ')
-            .every((v) => item.name.toLowerCase().includes(v))
-        })
-      } else {
-        return this.tags
-      }
-    }
-  },
   async fetch() {
     const tags = await fetch(
       `https://dev.to/api/tags?per_page=1000`
@@ -65,6 +51,21 @@ export default {
       tags: []
     }
   },
+  computed: {
+    queryTags() {
+      if (this.searchQuery) {
+        return this.tags.filter((item) => {
+          return this.searchQuery
+            .toLowerCase()
+            .split(' ')
+            .every((v) => item.name.toLowerCase().includes(v))
+        })
+      } else {
+        return this.tags
+      }
+    }
+  },
+
   methods: {},
   head() {
     return {

@@ -3,7 +3,7 @@
     <nuxt-link
       v-for="link in links"
       :key="link.slug"
-      :to="{ name: link.slug }"
+      :to="localePath({ name: link.slug })"
       class="tag"
     >
       {{ link.name }}

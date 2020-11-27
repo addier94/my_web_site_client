@@ -19,16 +19,10 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  padding: 2rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  @apply relative z-50 p-8 text-center flex items-center justify-center;
   span {
-    display: inline-block;
+    @apply inline-block uppercase;
     line-height: 1;
-    text-transform: uppercase;
     letter-spacing: $-ls2;
     font-size: $text-xs;
     font-weight: $bold-body-font-weight;
