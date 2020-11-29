@@ -77,7 +77,7 @@ export default {
 
 <style lang="scss">
 .skills {
-  @apply relative mx-auto w-64 z-30 grid grid-flow-row grid-cols-3 grid-rows-4 gap-6;
+  @apply relative mx-auto w-64 z-30 grid grid-flow-row grid-cols-3 grid-rows-4 gap-6 shadow-normal_shadow py-4;
   &__icon {
     @apply text-4xl flex items-center justify-center;
     &:focus {

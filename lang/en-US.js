@@ -2,25 +2,28 @@ export default {
   nav: {
     home: 'Home',
     my_articles: 'My Articles',
-    articles: 'articles',
+    articles: 'Articles',
   },
   home: {
-    "io": "Comes from Input/Output, as the flow in every informatic system, representing the inputs and outputs",
-    "samuel": "My name, a pleasure! I invite you to follow me on my social networks and be ready for news announcements"
+    io: "Learning to be a master programmer is learning to be skilled at locating and correcting 'bugs'. The question to ask about software is not whether it is right or wrong, but whether it can be fixed.",
+    alfredo: "Hi, I'm Alfredo, nice to meet you! I invite you to follow me on my social networks and thus be attentive to new news"
   },
   about: {
-    "historia": "History",
-    "historia_p1": "I'm Samuel Burbano, I've been studing software development since I'm 12 years old, I work professionally as a software developer since the age of 14, today I have 23 years old and every day I fall more in love with this marvelous world.",
-    "historia_p2": "I've worked on backend and frontend technologies, In the last 5 to 6 years I've been dedicated to frontend and currently I'm a Senior Frontend Developer.",
-    "historia_p3": "I love technology communities and I always try to organize or participate on them. I'm a part of {estreamercoders}, a community of developers that stream in spanish, where I regularly do streams about JavaScript and VueJS",
-    "frase": "Phrase",
-    "frase_explicacion": "Anyone can develop, but learning “good” programming and use the logic is something that you learn through the years with practice and dilligence",
-    "habilidades": "Skill | Skills"
+    name: "About",
+    historia: "History",
+    historia_p1: "I am Alfredo Fernández, I spent the last years working in technology for companies as a 'freelancer', where I perfected my trade as a software engineer",
+
+    historia_p2: "I have worked in 'backend' and 'frontend' technologies, although lately I have focused more on 'front', currently I am still a 'freelancer'.",
+    historia_p3: "I love technology communities and I always seek to update myself as I enjoy doing this and at the same time continue to grow professionally.",
+    frase: "Sentence",
+    frase_explicacion: "When you learn to code, you hardly ever get what you want the first time. Learning to be a master programmer is learning to be skilled at locating and correcting 'bugs'. The question to ask about software is not whether it is right or wrong, but whether it can be fixed.",
+    habilidades: "Skill | Skills"
   },
   contact: {
-    "comunidad": "Community",
-    "comunidad_explicacion": "You can be a part of {estreamercoders} all the spanish content we are generating for the whole world",
-    "yo": "Me",
-    "yo_descripcion": "You can follow me through my social networks Twitter, Facebook, Twitch, etc. Or you can write me to {mailto}"
+    name: "Contact",
+    comunidad: "Community",
+    comunidad_explicacion: "You can do part {estreamercoders} and see all the content in Spanish that we are generating for the world",
+
+    yo_descripcion: "You can follow me through my social networks Twitter, Facebook, Twitch, etc. Or you can write to me {mailto}"
   }
 }

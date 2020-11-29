@@ -1,26 +1,29 @@
 export default {
   nav: {
-    home: 'Home',
-    my_articles: 'My Articles',
-    articles: 'articles',
+    home: 'Inicio',
+    my_articles: 'Mis Artículos',
+    articles: 'Artículos',
   },
   home: {
-    "io": "Viene de Input/Output, como el flujo de todo sistema informatico, representando las entradas y salidas",
-    "samuel": "Mi nombre, mucho gusto! Te invito a seguirme en mis redes sociales y asi estar atento a nuevas noticias"
+    io: "Aprender a ser un maestro programador es aprender a ser diestro en localizar y corregir 'bugs'. La pregunta que debe hacerse sobre un software no es si está bien o está mal, sino si es que éste puede ser corregido.",
+    alfredo: "Hola soy Alfredo,  mucho gusto! Te invito a seguirme en mis redes sociales y asi estar atento a nuevas noticias"
   },
   about: {
-    "historia": "Historia",
-    "historia_p1": "Soy Samuel Burbano, estudio programacion desde que tengo 12 años, trabajo en el ambito profesional de la programacion desde los 14, a dia de hoy tengo 23 años y cada dia me enamoro mas de este maravilloso mundo.",
-    "historia_p2": "He trabajado en tecnologias de backend y frontend, en los ultimos 5 a 6 años me he dedicado al frontend y actualmente soy Senior Frontend Developer.",
-    "historia_p3": "Amo las comunidades tecnologicas y siempre busco organizar o participar en ellas. Hago parte de {estreamercoders}, una comunidad de streamers programadores en español, donde hago streams regularmente sobre JavaScript y VueJS",
-    "frase": "Frase",
-    "frase_explicacion": "Cualquiera puede programar, pero aprender a programar “bien” y usando la logica es algo que se aprende a traves de los años con practica y diligencia",
-    "habilidades": "Habilidad | Habilidades"
+    name: "Sobre mi",
+    historia: "Historia",
+    historia_p1: "Soy Alfredo Fernández, Pasé los últimos años trabajando en tecnología para empresas como 'freelancer' , donde perfeccioné mi oficio como ingeniero de software",
+
+    historia_p2: "He trabajado en tecnologías de 'backend' y 'frontend', aunque últimamente me he enfocado más en 'front', actualmente sigo siendo 'freelancer'.",
+    historia_p3: "Amo las comunidades tecnológicas y siempre busco actualizarme ya que disfruto haciendo esto y al mismo tiempo seguir creciendo profesionalmente.",
+    frase: "Frase",
+    frase_explicacion: "Cuando aprendes a programar casi nunca obtienes lo que quieres la primera vez. Aprender a ser un maestro programador es aprender a ser diestro en localizar y corregir 'bugs'. La pregunta que debe hacerse sobre un software no es si está bien o está mal, sino si es que éste puede ser corregido.",
+    habilidades: "Habilidad | Habilidades"
   },
   contact: {
-    "comunidad": "Comunidad",
-    "comunidad_explicacion": "Puedes hacer parte {estreamercoders} y ver todo el contenido en español que estamos generando para el mundo",
-    "yo": "Yo",
-    "yo_descripcion": "Puedes seguirme a través de mis redes sociales Twitter, Facebook, Twitch, etc. O puedes escribirme a {mailto}"
+    name: "Contacto",
+    comunidad: "Comunidad",
+    comunidad_explicacion: "Puedes hacer parte {estreamercoders} y ver todo el contenido en español que estamos generando para el mundo",
+
+    yo_descripcion: "Puedes seguirme a través de mis redes sociales Twitter, Facebook, Twitch, etc. O puedes escribirme a {mailto}"
   }
 }

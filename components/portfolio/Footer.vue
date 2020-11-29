@@ -1,14 +1,15 @@
 <template>
   <footer>
-    <button @click="navigateTo()" :aria-label="$t('volver')">
-      <fa :icon="['fas', 'arrow-circle-up']"></fa>
+    <button :aria-label="$t('volver')" @click="navigateTo()">
+      <fa style="color: black" :icon="['fas', 'arrow-circle-up']"></fa>
     </button>
     <LocaleSwitcher />
   </footer>
 </template>
 
 <script>
-import LocaleSwitcher from './LocaleSwitcher.vue'
+import LocaleSwitcher from '@/components/portfolio/help/LocaleSwitcher.vue'
+
 export default {
   components: {
     LocaleSwitcher
@@ -21,7 +22,7 @@ export default {
 }
 </script>
 
-<style lang="scss" src="@/assets/css/components/footer.scss"></style>
+<style lang="scss" src="@/assets/css/pages/footer.scss"></style>
 
 <i18n>
 {

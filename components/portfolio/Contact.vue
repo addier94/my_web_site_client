@@ -1,14 +1,14 @@
 <template>
   <div
-    class="contact"
     v-observe-visibility="{
       callback: visibilityChanged,
       intersection: {
         threshold: [0, 0.25, 0.5, 0.75, 1]
       }
     }"
+    class="contact"
   >
-    <h2>Contact</h2>
+    <h2 v-t="'contact.name'"></h2>
     <div class="contact-card" :class="{ active, inactive: !active }">
       <img src="@/assets/alfre.png" alt="Pengu" />
       <div class="contact-card--left"></div>
@@ -41,15 +41,16 @@
               <fa :icon="['far', 'hand-pointer']"></fa>
             </span>
           </div>
-          <h3 v-t="'contact.yo'"></h3>
           <i18n path="contact.yo_descripcion" tag="p">
             <template #mailto>
-              <a href="mailto:me@iosamuel.dev">me@iosamuel.dev</a>
+              <a href="mailto:alfredo@fernandezalfredo.com"
+                >alfredo@fernandezalfredo.com</a
+              >
             </template>
           </i18n>
         </div>
         <SocialIcons
-          className="contact-card--bottom"
+          class-name="contact-card--bottom"
           :split="true"
           :discord="true"
         >
@@ -76,11 +77,11 @@
 <script>
 import SocialIcons from '@/components/portfolio/help/SocialIcons.vue'
 export default {
-  props: {
-    active: Boolean
-  },
   components: {
     SocialIcons
+  },
+  props: {
+    active: Boolean
   },
   methods: {
     visibilityChanged(visible, { intersectionRatio }) {

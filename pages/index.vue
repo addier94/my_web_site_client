@@ -1,19 +1,31 @@
 <template>
   <div>
-    <Header />
+    <Header :active="header.active" @scroll="scroll($event)" />
     <div class="max-w-screen-lg -mt-24 mx-auto">
-      <Home />
-      <About />
-      <Contact />
+      <Home
+        ref="home"
+        :active="header.active === 'home'"
+        @visible="changeActive"
+      />
+      <About
+        ref="about"
+        :active="header.active === 'about'"
+        @visible="changeActive"
+      />
+      <Contact
+        ref="contact"
+        :active="header.active === 'contact'"
+        @visible="changeActive"
+      />
     </div>
-    <!-- <Footer /> -->
+    <Footer @scroll="scroll($event)" />
   </div>
 </template>
 
 <script>
 import Header from '@/components/portfolio/Header.vue'
 import Home from '@/components/portfolio/Home.vue'
-// import Footer from '@/components/portfolio/Footer.vue'
+import Footer from '@/components/portfolio/Footer.vue'
 
 import About from '@/components/portfolio/About.vue'
 import Contact from '@/components/portfolio/Contact.vue'
@@ -23,8 +35,8 @@ export default {
     Header,
     Home,
     About,
-    Contact
-    // Footer,
+    Contact,
+    Footer
   },
   data() {
     return {

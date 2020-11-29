@@ -32,32 +32,39 @@
 
 <script>
 export default {
-  props: ['className', 'split'],
+  // props: ['className', 'split'],
+  props: {
+    className: {
+      type: String,
+      default: ''
+    },
+    split: Boolean
+  },
   data() {
     return {
       icons: [
         {
-          link: 'https://twitter.com/iosamuel',
+          link: 'https://twitter.com/afreddier',
           name: 'twitter'
         },
         {
-          link: 'https://facebook.com/iosamuel.dev',
+          link: 'https://www.facebook.com/afreddier',
           name: 'facebook'
         },
         {
-          link: 'https://linkedin.com/in/iosamuel',
+          link: 'https://www.linkedin.com/in/afreddier',
           name: 'linkedin'
         },
         {
-          link: 'https://github.com/iosamuel',
+          link: 'https://github.com/afreddier',
           name: 'github'
         },
         {
-          link: 'https://twitch.tv/iosamuel',
+          link: 'https://www.twitch.tv/afreddier',
           name: 'twitch'
         },
         {
-          link: 'https://youtube.com/channel/UCTvtM8ZisSrp9rii77D85Zw',
+          link: 'https://www.youtube.com/channel/UC36KnR-WXAlragZX5SZIEUA',
           name: 'youtube'
         }
       ]

@@ -8,7 +8,7 @@
     }"
     class="about"
   >
-    <h2>About</h2>
+    <h2 v-t="'about.name'"></h2>
     <div class="about-card" :class="{ active, inactive: !active }">
       <img src="@/assets/alfre.png" alt="Pengu" />
       <div class="about-card--right">
@@ -33,9 +33,9 @@
           </i18n>
           <h3 v-t="'about.frase'"></h3>
           <p>
-            <em>
+            <!-- <em>
               “ Coding is easy, logically coding is what makes it special
-            </em>
+            </em> -->
           </p>
           <p v-t="'about.frase_explicacion'"></p>
           <h3>{{ $tc('about.habilidades', 3) }}</h3>
