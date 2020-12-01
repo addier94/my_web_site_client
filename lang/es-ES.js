@@ -1,10 +1,10 @@
 export default {
   nav: {
-    home: 'Inicio',
     my_articles: 'Mis Artículos',
     articles: 'Artículos',
   },
   home: {
+    name: "Inicio",
     io: "Aprender a ser un maestro programador es aprender a ser diestro en localizar y corregir 'bugs'. La pregunta que debe hacerse sobre un software no es si está bien o está mal, sino si es que éste puede ser corregido.",
     alfredo: "Hola soy Alfredo,  mucho gusto! Te invito a seguirme en mis redes sociales y asi estar atento a nuevas noticias"
   },

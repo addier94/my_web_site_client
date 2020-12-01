@@ -5,50 +5,31 @@
     </nuxt-link>
     <nav>
       <ul>
-        <li v-for="link in links" :key="link.slug">
+        <li>
+          <nuxt-link :to="localePath({ name: 'index' })">{{
+            $t('home.name')
+          }}</nuxt-link>
+        </li>
+        <li>
           <nuxt-link
-            v-if="typeof link.params !== 'string'"
-            :to="localePath({ name: link.slug })"
-          >
-            {{ link.name }}
-          </nuxt-link>
-          <nuxt-link
-            v-else
             :to="
-              localePath({ name: link.slug, params: { username: link.params } })
+              localePath({
+                name: 'username',
+                params: { username: 'afreddier' }
+              })
             "
+            >{{ $t('nav.my_articles') }}</nuxt-link
           >
-            {{ link.name }}
-          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link :to="localePath({ name: 'article' })">{{
+            $t('nav.articles')
+          }}</nuxt-link>
         </li>
       </ul>
     </nav>
   </header>
 </template>
-<script>
-export default {
-  components: {},
-  data() {
-    return {
-      links: [
-        {
-          name: 'Home',
-          slug: 'index'
-        },
-        {
-          name: 'My Articles',
-          slug: 'username',
-          params: 'afreddier'
-        },
-        {
-          name: 'Articles',
-          slug: 'article'
-        }
-      ]
-    }
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 header {

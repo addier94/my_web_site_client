@@ -30,6 +30,10 @@ export default {
           color: '#E14D4D'
         },
         {
+          icon: 'linux',
+          color: '#000000'
+        },
+        {
           icon: 'sass',
           color: '#D62383'
         },
@@ -54,16 +58,12 @@ export default {
           color: '#CD3B1A'
         },
         {
-          icon: 'gulp',
-          color: '#E11010'
+          icon: 'php',
+          color: '#8993BE'
         },
         {
           icon: 'trello',
           color: '#3D458B'
-        },
-        {
-          icon: 'linux',
-          color: '#000000'
         },
         {
           icon: 'python',
@@ -131,10 +131,10 @@ export default {
         color: #cd3b1a;
       }
     }
-    &.gulp {
+    &.php {
       &:focus,
       &:hover {
-        color: #e11010;
+        color: #8993be;
       }
     }
     &.trello {
@@ -196,7 +196,7 @@ export default {
     "node-js": "NodeJS para crear APIs con Express y KOA, GraphQL servers, DBM con Mongoose, etc",
     "npm": "Creación y distribución de paquetes en NPM con y sin lerna",
     "git-alt": "Version managers como Git altamente usado todos los días",
-    "gulp": "Transpilers/Compilers/Bundlers como Gulp, Webpack, Babel, entre otros",
+    "php": "Transpilers/Compilers/Bundlers como Gulp, Webpack, Babel, entre otros",
     "trello": "Metodologias Agiles (SCRUM) con JIRA o Trello",
     "linux": "Manejo de servidores y entornos virtuales (SSH) en sistemas operativos Linux.",
     "python": "Python fue mi primer lenguaje principal y he programado muchas cosas con el (juegos, webs con Django, desktop aplications con PyQt, etc)"

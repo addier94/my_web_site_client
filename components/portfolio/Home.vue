@@ -8,7 +8,7 @@
     }"
     class="home"
   >
-    <h2 v-t="home"></h2>
+    <h2>{{ $t('home.name') }}</h2>
     <div
       class="home-card shadow-small_shadow"
       :class="{ active, inactive: !active }"
@@ -26,9 +26,9 @@
       <div class="home-card--right">
         <div class="right__content">
           <h3 v-t="'about.frase'"></h3>
-          <p v-t="'home.io'"></p>
+          <p>{{ $t('home.io') }}</p>
           <h3>Alfredo</h3>
-          <p v-t="'home.alfredo'"></p>
+          <p>{{ $t('home.alfredo') }}</p>
         </div>
         <transition appear name="home-card--bottom">
           <SocialIcons class-name="home-card--bottom"></SocialIcons>

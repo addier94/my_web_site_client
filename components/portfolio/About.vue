@@ -8,7 +8,7 @@
     }"
     class="about"
   >
-    <h2 v-t="'about.name'"></h2>
+    <h2>{{ $t('about.name') }}</h2>
     <div class="about-card" :class="{ active, inactive: !active }">
       <img src="@/assets/alfre.png" alt="Pengu" />
       <div class="about-card--right">
@@ -16,9 +16,9 @@
       </div>
       <div class="about-card--left">
         <div class="left__content">
-          <h3 v-t="'about.historia'"></h3>
-          <p v-t="'about.historia_p1'"></p>
-          <p v-t="'about.historia_p2'"></p>
+          <h3>{{ $t('about.historia') }}</h3>
+          <p>{{ $t('about.historia_p1') }}</p>
+          <p>{{ $t('about.historia_p2') }}</p>
           <i18n path="about.historia_p3" tag="p">
             <template #estreamercoders>
               <a
@@ -31,13 +31,16 @@
               </a>
             </template>
           </i18n>
-          <h3 v-t="'about.frase'"></h3>
+          <h3>{{ $t('about.frase') }}</h3>
           <p>
             <!-- <em>
               “ Coding is easy, logically coding is what makes it special
             </em> -->
           </p>
-          <p v-t="'about.frase_explicacion'"></p>
+          <p>
+            {{ $t('about.frase_explicacion') }}
+          </p>
+          <!-- <h3>{{ $t('about.habilidades') }}</h3> -->
           <h3>{{ $tc('about.habilidades', 3) }}</h3>
         </div>
       </div>
@@ -47,7 +50,7 @@
 </template>
 
 <script>
-import Skills from '@/components/Skills.vue'
+import Skills from '@/components/portfolio/help/Skills.vue'
 export default {
   components: {
     Skills

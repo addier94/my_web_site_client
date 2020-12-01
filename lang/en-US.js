@@ -1,10 +1,10 @@
 export default {
   nav: {
-    home: 'Home',
     my_articles: 'My Articles',
     articles: 'Articles',
   },
   home: {
+    name: "Home",
     io: "Learning to be a master programmer is learning to be skilled at locating and correcting 'bugs'. The question to ask about software is not whether it is right or wrong, but whether it can be fixed.",
     alfredo: "Hi, I'm Alfredo, nice to meet you! I invite you to follow me on my social networks and thus be attentive to new news"
   },
