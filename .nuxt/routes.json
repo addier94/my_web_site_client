@@ -1,0 +1,114 @@
+[
+  {
+    "name": "alltags___en",
+    "path": "/alltags",
+    "component": "/home/alfredo/code/consumingdevapi/pages/alltags.vue",
+    "chunkName": "pages/alltags",
+    "_name": "_7ea8bec1"
+  },
+  {
+    "name": "article___en",
+    "path": "/article",
+    "component": "/home/alfredo/code/consumingdevapi/pages/article.vue",
+    "chunkName": "pages/article",
+    "_name": "_55314f06"
+  },
+  {
+    "name": "index___es",
+    "path": "/es",
+    "component": "/home/alfredo/code/consumingdevapi/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3f0e9619"
+  },
+  {
+    "name": "featured___en",
+    "path": "/featured",
+    "component": "/home/alfredo/code/consumingdevapi/pages/featured.vue",
+    "chunkName": "pages/featured",
+    "_name": "_39ef09b7"
+  },
+  {
+    "name": "nuxt___en",
+    "path": "/nuxt",
+    "component": "/home/alfredo/code/consumingdevapi/pages/nuxt.vue",
+    "chunkName": "pages/nuxt",
+    "_name": "_33331a8c"
+  },
+  {
+    "name": "alltags___es",
+    "path": "/es/alltags",
+    "component": "/home/alfredo/code/consumingdevapi/pages/alltags.vue",
+    "chunkName": "pages/alltags",
+    "_name": "_7ea8bec1"
+  },
+  {
+    "name": "article___es",
+    "path": "/es/article",
+    "component": "/home/alfredo/code/consumingdevapi/pages/article.vue",
+    "chunkName": "pages/article",
+    "_name": "_55314f06"
+  },
+  {
+    "name": "featured___es",
+    "path": "/es/featured",
+    "component": "/home/alfredo/code/consumingdevapi/pages/featured.vue",
+    "chunkName": "pages/featured",
+    "_name": "_39ef09b7"
+  },
+  {
+    "name": "nuxt___es",
+    "path": "/es/nuxt",
+    "component": "/home/alfredo/code/consumingdevapi/pages/nuxt.vue",
+    "chunkName": "pages/nuxt",
+    "_name": "_33331a8c"
+  },
+  {
+    "name": "t-tag___es",
+    "path": "/es/t/:tag?",
+    "component": "/home/alfredo/code/consumingdevapi/pages/t/_tag.vue",
+    "chunkName": "pages/t/_tag",
+    "_name": "_da213d42"
+  },
+  {
+    "name": "username___es",
+    "path": "/es/:username",
+    "component": "/home/alfredo/code/consumingdevapi/pages/_username/index.vue",
+    "chunkName": "pages/_username/index",
+    "_name": "_193407ff"
+  },
+  {
+    "name": "t-tag___en",
+    "path": "/t/:tag?",
+    "component": "/home/alfredo/code/consumingdevapi/pages/t/_tag.vue",
+    "chunkName": "pages/t/_tag",
+    "_name": "_da213d42"
+  },
+  {
+    "name": "username-article___es",
+    "path": "/es/:username/:article",
+    "component": "/home/alfredo/code/consumingdevapi/pages/_username/_article.vue",
+    "chunkName": "pages/_username/_article",
+    "_name": "_2e51adcc"
+  },
+  {
+    "name": "index___en",
+    "path": "/",
+    "component": "/home/alfredo/code/consumingdevapi/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3f0e9619"
+  },
+  {
+    "name": "username___en",
+    "path": "/:username",
+    "component": "/home/alfredo/code/consumingdevapi/pages/_username/index.vue",
+    "chunkName": "pages/_username/index",
+    "_name": "_193407ff"
+  },
+  {
+    "name": "username-article___en",
+    "path": "/:username/:article",
+    "component": "/home/alfredo/code/consumingdevapi/pages/_username/_article.vue",
+    "chunkName": "pages/_username/_article",
+    "_name": "_2e51adcc"
+  }
+]
