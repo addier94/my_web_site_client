@@ -20,6 +20,7 @@
     "nuxt": "^2.12.2",
     "nuxt-ackee": "^2.0.0",
     "nuxt-i18n": "^6.15.4",
+    "nuxt-start": "^2.14.10",
     "v-tooltip": "^2.0.3",
     "vue-content-placeholders": "^0.2.1",
     "vue-observe-visibility": "^0.4.6"
