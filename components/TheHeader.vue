@@ -1,17 +1,26 @@
 <template>
   <header>
-    <nuxt-link to="/" class="logo-wrapper">
-      <img class="w-16" src="@/assets/logo.png" alt="Logo" />
+    <nuxt-link to="/" class="logo-wrapper hidden sm:block" tag="nav">
+      <ul>
+        <li>
+          <div class="link leading-4 cursor-pointer">
+            <p>FERNÁNDEZ</p>
+            <p>ALFREDO</p>
+          </div>
+        </li>
+      </ul>
+      <!-- <img class="w-16" src="@/assets/logo.png" alt="Logo" /> -->
     </nuxt-link>
     <nav>
       <ul>
         <li>
-          <nuxt-link :to="localePath({ name: 'index' })">{{
+          <nuxt-link class="link" :to="localePath({ name: 'index' })">{{
             $t('home.name')
           }}</nuxt-link>
         </li>
         <li>
           <nuxt-link
+            class="link"
             :to="
               localePath({
                 name: 'username',
@@ -22,7 +31,7 @@
           >
         </li>
         <li>
-          <nuxt-link :to="localePath({ name: 'article' })">{{
+          <nuxt-link class="link" :to="localePath({ name: 'article' })">{{
             $t('nav.articles')
           }}</nuxt-link>
         </li>
@@ -49,7 +58,7 @@ header {
       @apply flex flex-wrap;
       li {
         margin: 0.3rem;
-        a {
+        .link {
           box-shadow: $small-shadow;
           padding: 0.25rem 0.6rem;
           border-radius: 0.5rem;

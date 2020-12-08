@@ -10,7 +10,7 @@
   >
     <h2 v-t="'contact.name'"></h2>
     <div class="contact-card" :class="{ active, inactive: !active }">
-      <img src="@/assets/alfre.png" alt="Pengu" />
+      <!-- <img src="@/assets/alfre.png" alt="Pengu" /> -->
       <div class="contact-card--left"></div>
       <div class="contact-card--right">
         <div class="right__content">
