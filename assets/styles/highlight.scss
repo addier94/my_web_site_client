@@ -1,3 +1,18 @@
+.ltag__twitter-tweet__main img{
+  width: 40px !important;
+}
+.ltag__twitter-tweet__header{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ltag__twitter-tweet__actions{
+  display: flex;
+  justify-content: space-around;
+}
+.highlight__panel.js-actions-panel{
+  display: none;
+}
 pre {
   background: #29292e;
   border-radius: 2px;
