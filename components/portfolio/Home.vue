@@ -1,17 +1,8 @@
 <template>
-  <div
-    v-observe-visibility="{
-      callback: visibilityChanged,
-      intersection: {
-        threshold: [0, 0.25, 0.5, 0.75, 1]
-      }
-    }"
-    class="home"
-  >
+  <div class="home">
     <h2 class="mb-8 text-center text-3xl">{{ $t('home.name') }}</h2>
     <div
       class="home-card shadow-small_shadow rounded-2xl grid grid-cols-1 relative bg-elevated-surface-color"
-      :class="{ active, inactive: !active }"
     >
       <img
         class="absolute w-8 h-8 z-20 transition-all duration-700"
@@ -47,14 +38,6 @@ import SocialIcons from '@/components/portfolio/help/SocialIcons.vue'
 export default {
   components: {
     SocialIcons
-  },
-  props: {
-    active: Boolean
-  },
-  methods: {
-    visibilityChanged(visible, { intersectionRatio }) {
-      this.$emit('visible', { from: 'home', visible, intersectionRatio })
-    }
   }
 }
 </script>

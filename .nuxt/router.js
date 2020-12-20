@@ -3,14 +3,14 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _5d41bd37 = () => interopDefault(import('../pages/alltags.vue' /* webpackChunkName: "pages/alltags" */))
-const _97ff521a = () => interopDefault(import('../pages/article.vue' /* webpackChunkName: "pages/article" */))
-const _79a0ba0f = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
-const _2e75da01 = () => interopDefault(import('../pages/featured.vue' /* webpackChunkName: "pages/featured" */))
-const _bf1cc054 = () => interopDefault(import('../pages/nuxt.vue' /* webpackChunkName: "pages/nuxt" */))
-const _aabc87ae = () => interopDefault(import('../pages/t/_tag.vue' /* webpackChunkName: "pages/t/_tag" */))
-const _1d7a3075 = () => interopDefault(import('../pages/_username/index.vue' /* webpackChunkName: "pages/_username/index" */))
-const _4935a4e4 = () => interopDefault(import('../pages/_username/_article.vue' /* webpackChunkName: "pages/_username/_article" */))
+const _3c21fd08 = () => interopDefault(import('../pages/alltags.vue' /* webpackChunkName: "pages/alltags" */))
+const _38ad9b38 = () => interopDefault(import('../pages/article.vue' /* webpackChunkName: "pages/article" */))
+const _22ec4b94 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _3f711e5c = () => interopDefault(import('../pages/featured.vue' /* webpackChunkName: "pages/featured" */))
+const _745b49b1 = () => interopDefault(import('../pages/nuxt.vue' /* webpackChunkName: "pages/nuxt" */))
+const _2ac85b44 = () => interopDefault(import('../pages/t/_tag.vue' /* webpackChunkName: "pages/t/_tag" */))
+const _6dd5408c = () => interopDefault(import('../pages/_username/index.vue' /* webpackChunkName: "pages/_username/index" */))
+const _4937737f = () => interopDefault(import('../pages/_username/_article.vue' /* webpackChunkName: "pages/_username/_article" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -30,67 +30,67 @@ export const routerOptions = {
 
   routes: [{
     path: "/alltags",
-    component: _5d41bd37,
+    component: _3c21fd08,
     name: "alltags___en"
   }, {
     path: "/article",
-    component: _97ff521a,
+    component: _38ad9b38,
     name: "article___en"
   }, {
     path: "/es",
-    component: _79a0ba0f,
+    component: _22ec4b94,
     name: "index___es"
   }, {
     path: "/featured",
-    component: _2e75da01,
+    component: _3f711e5c,
     name: "featured___en"
   }, {
     path: "/nuxt",
-    component: _bf1cc054,
+    component: _745b49b1,
     name: "nuxt___en"
   }, {
     path: "/es/alltags",
-    component: _5d41bd37,
+    component: _3c21fd08,
     name: "alltags___es"
   }, {
     path: "/es/article",
-    component: _97ff521a,
+    component: _38ad9b38,
     name: "article___es"
   }, {
     path: "/es/featured",
-    component: _2e75da01,
+    component: _3f711e5c,
     name: "featured___es"
   }, {
     path: "/es/nuxt",
-    component: _bf1cc054,
+    component: _745b49b1,
     name: "nuxt___es"
   }, {
     path: "/es/t/:tag?",
-    component: _aabc87ae,
+    component: _2ac85b44,
     name: "t-tag___es"
   }, {
     path: "/es/:username",
-    component: _1d7a3075,
+    component: _6dd5408c,
     name: "username___es"
   }, {
     path: "/t/:tag?",
-    component: _aabc87ae,
+    component: _2ac85b44,
     name: "t-tag___en"
   }, {
     path: "/es/:username/:article",
-    component: _4935a4e4,
+    component: _4937737f,
     name: "username-article___es"
   }, {
     path: "/",
-    component: _79a0ba0f,
+    component: _22ec4b94,
     name: "index___en"
   }, {
     path: "/:username",
-    component: _1d7a3075,
+    component: _6dd5408c,
     name: "username___en"
   }, {
     path: "/:username/:article",
-    component: _4935a4e4,
+    component: _4937737f,
     name: "username-article___en"
   }],
 

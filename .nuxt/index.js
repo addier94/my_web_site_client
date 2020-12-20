@@ -13,9 +13,9 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_pluginrouting_72e68e92 from 'nuxt_plugin_pluginrouting_72e68e92' // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
-import nuxt_plugin_pluginmain_3642c618 from 'nuxt_plugin_pluginmain_3642c618' // Source: ./nuxt-i18n/plugin.main.js (mode: 'all')
-import nuxt_plugin_nuxtackeeclient_03b4c0aa from 'nuxt_plugin_nuxtackeeclient_03b4c0aa' // Source: ./nuxt-ackee.client.js (mode: 'client')
+import nuxt_plugin_pluginrouting_2dfad2fc from 'nuxt_plugin_pluginrouting_2dfad2fc' // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
+import nuxt_plugin_pluginmain_3d0b59f3 from 'nuxt_plugin_pluginmain_3d0b59f3' // Source: ./nuxt-i18n/plugin.main.js (mode: 'all')
+import nuxt_plugin_nuxtackeeclient_741f4df4 from 'nuxt_plugin_nuxtackeeclient_741f4df4' // Source: ./nuxt-ackee.client.js (mode: 'client')
 import nuxt_plugin_vueplaceholders_097931cc from 'nuxt_plugin_vueplaceholders_097931cc' // Source: ../plugins/vue-placeholders.js (mode: 'all')
 import nuxt_plugin_vueobservevisibilityclient_42d89e44 from 'nuxt_plugin_vueobservevisibilityclient_42d89e44' // Source: ../plugins/vue-observe-visibility.client.js (mode: 'client')
 import nuxt_plugin_fontawesome_b8db358e from 'nuxt_plugin_fontawesome_b8db358e' // Source: ../plugins/fontawesome.js (mode: 'all')
@@ -208,16 +208,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_pluginrouting_72e68e92 === 'function') {
-    await nuxt_plugin_pluginrouting_72e68e92(app.context, inject)
+  if (typeof nuxt_plugin_pluginrouting_2dfad2fc === 'function') {
+    await nuxt_plugin_pluginrouting_2dfad2fc(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginmain_3642c618 === 'function') {
-    await nuxt_plugin_pluginmain_3642c618(app.context, inject)
+  if (typeof nuxt_plugin_pluginmain_3d0b59f3 === 'function') {
+    await nuxt_plugin_pluginmain_3d0b59f3(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_nuxtackeeclient_03b4c0aa === 'function') {
-    await nuxt_plugin_nuxtackeeclient_03b4c0aa(app.context, inject)
+  if (process.client && typeof nuxt_plugin_nuxtackeeclient_741f4df4 === 'function') {
+    await nuxt_plugin_nuxtackeeclient_741f4df4(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vueplaceholders_097931cc === 'function') {

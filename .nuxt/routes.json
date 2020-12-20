@@ -2,113 +2,113 @@
   {
     "name": "alltags___en",
     "path": "/alltags",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/alltags.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/alltags.vue",
     "chunkName": "pages/alltags",
-    "_name": "_5d41bd37"
+    "_name": "_3c21fd08"
   },
   {
     "name": "article___en",
     "path": "/article",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/article.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/article.vue",
     "chunkName": "pages/article",
-    "_name": "_97ff521a"
+    "_name": "_38ad9b38"
   },
   {
     "name": "index___es",
     "path": "/es",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/index.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_79a0ba0f"
+    "_name": "_22ec4b94"
   },
   {
     "name": "featured___en",
     "path": "/featured",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/featured.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/featured.vue",
     "chunkName": "pages/featured",
-    "_name": "_2e75da01"
+    "_name": "_3f711e5c"
   },
   {
     "name": "nuxt___en",
     "path": "/nuxt",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/nuxt.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/nuxt.vue",
     "chunkName": "pages/nuxt",
-    "_name": "_bf1cc054"
+    "_name": "_745b49b1"
   },
   {
     "name": "alltags___es",
     "path": "/es/alltags",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/alltags.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/alltags.vue",
     "chunkName": "pages/alltags",
-    "_name": "_5d41bd37"
+    "_name": "_3c21fd08"
   },
   {
     "name": "article___es",
     "path": "/es/article",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/article.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/article.vue",
     "chunkName": "pages/article",
-    "_name": "_97ff521a"
+    "_name": "_38ad9b38"
   },
   {
     "name": "featured___es",
     "path": "/es/featured",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/featured.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/featured.vue",
     "chunkName": "pages/featured",
-    "_name": "_2e75da01"
+    "_name": "_3f711e5c"
   },
   {
     "name": "nuxt___es",
     "path": "/es/nuxt",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/nuxt.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/nuxt.vue",
     "chunkName": "pages/nuxt",
-    "_name": "_bf1cc054"
+    "_name": "_745b49b1"
   },
   {
     "name": "t-tag___es",
     "path": "/es/t/:tag?",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/t/_tag.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/t/_tag.vue",
     "chunkName": "pages/t/_tag",
-    "_name": "_aabc87ae"
+    "_name": "_2ac85b44"
   },
   {
     "name": "username___es",
     "path": "/es/:username",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/_username/index.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/_username/index.vue",
     "chunkName": "pages/_username/index",
-    "_name": "_1d7a3075"
+    "_name": "_6dd5408c"
   },
   {
     "name": "t-tag___en",
     "path": "/t/:tag?",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/t/_tag.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/t/_tag.vue",
     "chunkName": "pages/t/_tag",
-    "_name": "_aabc87ae"
+    "_name": "_2ac85b44"
   },
   {
     "name": "username-article___es",
     "path": "/es/:username/:article",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/_username/_article.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/_username/_article.vue",
     "chunkName": "pages/_username/_article",
-    "_name": "_4935a4e4"
+    "_name": "_4937737f"
   },
   {
     "name": "index___en",
     "path": "/",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/index.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_79a0ba0f"
+    "_name": "_22ec4b94"
   },
   {
     "name": "username___en",
     "path": "/:username",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/_username/index.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/_username/index.vue",
     "chunkName": "pages/_username/index",
-    "_name": "_1d7a3075"
+    "_name": "_6dd5408c"
   },
   {
     "name": "username-article___en",
     "path": "/:username/:article",
-    "component": "/home/alfredo/code/my_web_site/consumingdevapi/pages/_username/_article.vue",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/_username/_article.vue",
     "chunkName": "pages/_username/_article",
-    "_name": "_4935a4e4"
+    "_name": "_4937737f"
   }
 ]
