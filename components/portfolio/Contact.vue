@@ -75,7 +75,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .contact {
   @apply overflow-hidden pt-20 mb-20;
 

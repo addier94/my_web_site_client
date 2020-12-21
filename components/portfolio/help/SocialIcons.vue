@@ -82,7 +82,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .social-icon {
   @apply text-2xl;
   svg {

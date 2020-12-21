@@ -2,17 +2,12 @@
   <div class="home">
     <h2 class="mb-8 text-center text-3xl">{{ $t('home.name') }}</h2>
     <div
-      class="home-card shadow-small_shadow rounded-2xl grid grid-cols-1 relative bg-elevated-surface-color"
+      class="home-card shadow-small_shadow rounded-2xl grid grid-cols-1 md:grid-cols-2 relative bg-elevated-surface-color"
     >
-      <img
-        class="absolute w-8 h-8 z-20 transition-all duration-700"
-        src="@/assets/alfre.png"
-        alt="Pengu"
-      />
       <transition appear name="home-card--left">
         <div class="home-card--left">
           <img
-            class="shadow-normal_shadow relative w-full rounded-2xl"
+            class="shadow-normal_shadow relative w-full rounded-2xl md:bottom-0 md:max-h-full"
             src="@/assets/alfre.png"
             alt="Logo"
           />
@@ -42,18 +37,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .home {
   @apply pt-24;
   // overflow: hidden;
   &-card {
     // grid-template-columns: 0.5fr 1.5fr;
-    > img {
-      width: 50px;
-      height: 50px;
-      left: calc(50% - 25px);
-      transform: translateY(-50%);
-    }
 
     &--left {
       @apply flex flex-col rounded-l-lg my-3 mx-3;
@@ -126,15 +115,6 @@ export default {
     }
 
     @media screen and (min-width: 768px) {
-      grid-template-columns: 0.5fr 1fr;
-
-      &--left {
-        @apply items-center;
-        img {
-          @apply bottom-0 max-h-full;
-        }
-      }
-
       &--right {
         @apply relative;
       }

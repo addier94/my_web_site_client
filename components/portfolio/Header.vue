@@ -48,12 +48,12 @@ export default {
   box-shadow: $small-shadow;
   border-radius: 0.5rem;
   overflow: hidden;
-  background: white;
+  // background: white;
   a {
-    @apply block m-1;
+    @apply block p-1 top-0 left-0;
   }
 }
 .active {
-  box-shadow: $inner-shadow;
+  @apply border-r-4 border-primary-color;
 }
 </style>

@@ -1,18 +1,3 @@
-.ltag__twitter-tweet__main img{
-  width: 40px !important;
-}
-.ltag__twitter-tweet__header{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.ltag__twitter-tweet__actions{
-  display: flex;
-  justify-content: space-around;
-}
-.highlight__panel.js-actions-panel{
-  display: none;
-}
 pre {
   background: #29292e;
   border-radius: 2px;
@@ -329,4 +314,104 @@ div.inner-comment div.body div.highlight pre.highlight code {
 
 .highlight .il {
   color: #dda0dd;
+}
+
+
+
+
+// custom by highlight 
+div.ltag__user{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .profile-image-link{
+    margin-right: .4rem;
+  }
+  .ltag__user__content{
+    h2{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .ltag__user__social{
+      display: flex;
+      flex-wrap: wrap;
+      a{
+        margin-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+          width: 2rem;
+        }
+      } 
+    }
+  }
+}
+.ltag__twitter-tweet .ltag__twitter-tweet__main .ltag__twitter-tweet__header img{
+  width: 40px;
+  border-radius: 50%;
+  margin-right: .2rem;
+}
+.ltag__twitter-tweet__header{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ltag__twitter-tweet__actions{
+  display: flex;
+  justify-content: space-around;
+}
+.highlight__panel.js-actions-panel{
+  display: none;
+}
+.div.ltag__user{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .profile-image-link{
+    margin-right: .4rem;
+  }
+  .ltag__user__content{
+    h2{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .ltag__user__social{
+      display: flex;
+      flex-wrap: wrap;
+      a{
+        margin-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+          width: 2rem;
+        }
+      } 
+    }
+  }
+}
+.ltag__twitter-tweet .ltag__twitter-tweet__main .ltag__twitter-tweet__header img{
+  width: 40px;
+  border-radius: 50%;
+  margin-right: .2rem;
+}
+.ltag__twitter-tweet__header{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ltag__twitter-tweet__actions{
+  display: flex;
+  justify-content: space-around;
+}
+.highlight__panel.js-actions-panel{
+  display: none;
+}
+.ltag-github-readme-tag .readme-overview h2{
+  display: flex;
+  img{
+    margin-right: .2rem;
+    width: 2rem;
+  }
 }

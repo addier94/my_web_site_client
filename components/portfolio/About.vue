@@ -1,8 +1,7 @@
 <template>
-  <div class="about">
-    <h2>{{ $t('about.name') }}</h2>
+  <div class="about overflow-hidden pt-20">
+    <h2 class="mb-8 text-center text-3xl">{{ $t('about.name') }}</h2>
     <div class="about-card">
-      <img src="@/assets/alfre.png" alt="Pengu" />
       <div class="about-card--right">
         <img src="@/assets/alfre.png" alt="ME" />
       </div>
@@ -50,26 +49,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .about {
-  @apply overflow-hidden pt-20;
-
-  > h2 {
-    @apply mb-8 text-center text-3xl;
-  }
   &-card {
     @apply relative pb-6 bg-primary-dark;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     grid-template-columns: 0.2fr 1.8fr;
-
-    > img {
-      @apply absolute z-20 transition-all duration-700;
-      width: 50px;
-      height: 50px;
-      left: calc(50% - 25px);
-      transform: translateY(-50%);
-    }
 
     &--right {
       @apply p-16 transition-all duration-700 bg-gray-400;
@@ -103,7 +89,7 @@ export default {
       @apply pb-8;
 
       &--right {
-        @apply absolute w-2/6 right-0 p-8;
+        @apply absolute w-2/6 right-0 p-4;
       }
 
       &--left {

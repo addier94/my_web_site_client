@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header @scroll="scroll($event)" />
+    <Header :active="whereIs" @scroll="scroll($event)" />
     <div class="max-w-screen-lg -mt-24 mx-auto">
       <Home ref="home" />
       <About ref="about" />
@@ -26,8 +26,14 @@ export default {
     Contact,
     Footer
   },
+  data() {
+    return {
+      whereIs: ''
+    }
+  },
   methods: {
     scroll(where) {
+      this.whereIs = where
       this.$refs[where].$el.scrollIntoView({ behavior: 'smooth' })
     }
   }

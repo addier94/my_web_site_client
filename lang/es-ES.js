@@ -25,5 +25,17 @@ export default {
     comunidad_explicacion: "Puedes hacer parte {estreamercoders} y ver todo el contenido en español que estamos generando para el mundo",
 
     yo_descripcion: "Puedes seguirme a través de mis redes sociales Twitter, Facebook, Twitch, etc. O puedes escribirme a {mailto}"
-  }
+  },
+  "html5": "HTML & HTML5 API (WebStorage, Offline, Graphics, etc)",
+  "css3-alt": "CSS & CSS3 (Animations, Grid, etc)",
+  "sass": "Preprocesadores CSS como SASS, Stylus y PostCSS",
+  "js": "JavaScript como mi lenguaje principal, usando siempre su última sintaxis descrita por la W3C. Asi cómo También TypeScript y todos sus features.",
+  "vuejs": "VueJS, incluido Vuex, Vue-Router, NuxtJS, NativeScript, etc",
+  "node-js": "NodeJS para crear APIs con Express y KOA, GraphQL servers, DBM con Mongoose, etc",
+  "npm": "Creación y distribución de paquetes en NPM con y sin lerna",
+  "git-alt": "Version managers como Git altamente usado todos los días",
+  "php": "Transpilers/Compilers/Bundlers como Webpack, Babel etc un desarrollo enfocado en el entorno de laravel",
+  "trello": "Metodologias Agiles (SCRUM) con JIRA o Trello",
+  "linux": "Manejo de servidores y entornos virtuales (SSH) en sistemas operativos Linux.",
+  "python": "Python fue mi primer lenguaje principal y he programado muchas cosas con el (juegos, webs con Django, desktop aplications con PyQt, etc)"
 }

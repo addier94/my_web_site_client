@@ -21,7 +21,7 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 footer {
   @apply fixed bottom-0 h-10 w-full flex items-center justify-center z-50 bg-primary-dark;
   // background: $darkblue;

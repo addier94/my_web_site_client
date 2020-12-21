@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .locale-switcher {
   @apply absolute z-50;
   right: 2rem;
