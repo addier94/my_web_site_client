@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home mb-20">
     <h2 class="mb-8 text-center text-3xl">{{ $t('home.name') }}</h2>
     <div
       class="home-card shadow-small_shadow rounded-2xl grid grid-cols-1 md:grid-cols-2 relative bg-elevated-surface-color"

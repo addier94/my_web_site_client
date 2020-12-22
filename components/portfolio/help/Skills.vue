@@ -1,5 +1,5 @@
 <template>
-  <div class="skills">
+  <div class="skills__portfolio">
     <button
       v-for="icon in icons"
       :key="icon.icon"
@@ -8,7 +8,7 @@
         trigger: 'hover click focus'
       }"
       :class="icon.icon"
-      class="skills__icon"
+      class="skills__portfolio__icon"
       :aria-label="`${$tc('about.habilidades', 1)} ${icon.icon}`"
     >
       <fa :icon="['fab', icon.icon]"></fa>
@@ -76,7 +76,7 @@ export default {
 </script>
 
 <style lang="scss">
-.skills {
+.skills__portfolio {
   @apply relative mx-auto w-64 z-30 grid grid-flow-row grid-cols-3 grid-rows-4 gap-6 shadow-normal_shadow py-4;
   &__icon {
     @apply text-4xl flex items-center justify-center;

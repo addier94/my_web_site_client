@@ -1,32 +1,37 @@
 <template>
   <div class="min-h-screen flex items-center top-0 left-0 fixed z-50">
-    <div class="nav-height z-50">
+    <div class="nav-height bg-green-100 z-50">
       <a :class="{ active: active === 'home' }" @click="navigateTo('home')">
-        <athlete class="w-8 h-8 md:w-10 md:h-10" />
+        <HomeIcon class="w-8 h-8 md:w-10 md:h-10" />
       </a>
       <a :class="{ active: active === 'about' }" @click="navigateTo('about')">
-        <work class="w-8 h-8 md:w-10 md:h-10" />
+        <AboutIcon class="w-8 h-8 md:w-10 md:h-10" />
+      </a>
+      <a :class="{ active: active === 'job' }" @click="navigateTo('job')">
+        <JobIcon class="w-8 h-8 md:w-10 md:h-10" />
       </a>
       <a
         :class="{ active: active === 'contact' }"
         @click="navigateTo('contact')"
       >
-        <email class="w-8 h-8 md:w-10 md:h-10" />
+        <ContactIcon class="w-8 h-8 md:w-10 md:h-10" />
       </a>
     </div>
   </div>
 </template>
 
 <script>
-import Athlete from '@/assets/icons/athlete.svg?inline'
-import Email from '@/assets/icons/email.svg?inline'
-import Work from '@/assets/icons/work.svg?inline'
+import HomeIcon from '@/assets/icons/deck-24px.svg?inline'
+import AboutIcon from '@/assets/icons/message-24px.svg?inline'
+import JobIcon from '@/assets/icons/work-black-18dp.svg?inline'
+import ContactIcon from '@/assets/icons/email-24px.svg?inline'
 
 export default {
   components: {
-    Athlete,
-    Email,
-    Work
+    HomeIcon,
+    AboutIcon,
+    JobIcon,
+    ContactIcon
   },
   props: ['active'],
   data() {

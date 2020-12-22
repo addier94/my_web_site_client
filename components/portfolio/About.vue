@@ -1,5 +1,5 @@
 <template>
-  <div class="about overflow-hidden pt-20">
+  <div class="about overflow-hidden mb-20">
     <h2 class="mb-8 text-center text-3xl">{{ $t('about.name') }}</h2>
     <div class="about-card">
       <div class="about-card--right">

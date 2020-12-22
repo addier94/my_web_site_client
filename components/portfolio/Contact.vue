@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div class="contact overflow-hidden mb-20">
     <h2 v-t="'contact.name'"></h2>
     <div class="contact-card">
       <!-- <img src="@/assets/alfre.png" alt="Pengu" /> -->
@@ -77,8 +77,6 @@ export default {
 
 <style lang="scss" scoped>
 .contact {
-  @apply overflow-hidden pt-20 mb-20;
-
   > h2 {
     @apply mb-8 text-center text-3xl;
   }
