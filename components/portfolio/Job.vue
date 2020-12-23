@@ -16,6 +16,45 @@
           </template>
         </v-popover>
       </article>
+      <article>
+        <v-popover offset="16" trigger="hover" placement="right-start">
+          <job-card />
+          <template slot="popover">
+            <job-card-tooltip
+              title="course.title"
+              subtitle="course.category.name"
+              description="course.subtitle"
+              wsl="course.wsl"
+            />
+          </template>
+        </v-popover>
+      </article>
+      <article>
+        <v-popover offset="16" trigger="hover" placement="right-start">
+          <job-card />
+          <template slot="popover">
+            <job-card-tooltip
+              title="course.title"
+              subtitle="course.category.name"
+              description="course.subtitle"
+              wsl="course.wsl"
+            />
+          </template>
+        </v-popover>
+      </article>
+      <article>
+        <v-popover offset="16" trigger="hover" placement="right-start">
+          <job-card />
+          <template slot="popover">
+            <job-card-tooltip
+              title="course.title"
+              subtitle="course.category.name"
+              description="course.subtitle"
+              wsl="course.wsl"
+            />
+          </template>
+        </v-popover>
+      </article>
     </div>
   </div>
 </template>
@@ -57,8 +96,14 @@ article {
   @media (min-width: $screen-sm) {
     width: calc(50% - 2 * 0.5rem);
   }
-  @media (min-width: $screen-lg) {
-    width: calc(33.33333% - 2 * 0.5rem);
-  }
 }
+//   width: calc(100% - 2 * 0.5rem);
+//   margin: 0.5rem;
+//   @media (min-width: $screen-sm) {
+//     width: calc(50% - 2 * 0.5rem);
+//   }
+//   @media (min-width: $screen-lg) {
+//     width: calc(33.33333% - 2 * 0.5rem);
+//   }
+// }
 </style>

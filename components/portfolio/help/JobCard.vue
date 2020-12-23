@@ -89,4 +89,10 @@ export default {
     }
   }
 }
+
+.v-popover {
+  .trigger {
+    display: block !important;
+  }
+}
 </style>
