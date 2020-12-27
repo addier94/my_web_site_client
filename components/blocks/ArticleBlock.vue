@@ -40,7 +40,6 @@
           <time>{{ article.readable_publish_date }}</time>
         </div>
       </header>
-      <!-- eslint-disable-next-line -->
       <div class="content" v-html="article.body_html" />
     </template>
   </article>

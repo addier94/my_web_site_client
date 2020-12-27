@@ -2,6 +2,7 @@ export default {
   nav: {
     my_articles: 'Mis Artículos',
     articles: 'Artículos',
+    login: "Iniciar sesion",
   },
   home: {
     name: "Inicio",

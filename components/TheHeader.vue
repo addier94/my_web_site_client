@@ -35,6 +35,11 @@
             $t('nav.articles')
           }}</nuxt-link>
         </li>
+        <li>
+          <nuxt-link class="link" :to="localePath({ name: 'login' })">{{
+            $t('nav.login')
+          }}</nuxt-link>
+        </li>
       </ul>
     </nav>
   </header>

@@ -2,6 +2,7 @@ export default {
   nav: {
     my_articles: 'My Articles',
     articles: 'Articles',
+    login: 'Login',
   },
   home: {
     name: "Home",

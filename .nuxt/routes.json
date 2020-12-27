@@ -28,11 +28,32 @@
     "_name": "_3f711e5c"
   },
   {
+    "name": "login___en",
+    "path": "/login",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_26d822aa"
+  },
+  {
     "name": "nuxt___en",
     "path": "/nuxt",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/nuxt.vue",
     "chunkName": "pages/nuxt",
     "_name": "_745b49b1"
+  },
+  {
+    "name": "pforgot___en",
+    "path": "/pforgot",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/pforgot.vue",
+    "chunkName": "pages/pforgot",
+    "_name": "_19c20755"
+  },
+  {
+    "name": "register___en",
+    "path": "/register",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/register.vue",
+    "chunkName": "pages/register",
+    "_name": "_dd47b35e"
   },
   {
     "name": "alltags___es",
@@ -56,11 +77,39 @@
     "_name": "_3f711e5c"
   },
   {
+    "name": "login___es",
+    "path": "/es/login",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_26d822aa"
+  },
+  {
     "name": "nuxt___es",
     "path": "/es/nuxt",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/nuxt.vue",
     "chunkName": "pages/nuxt",
     "_name": "_745b49b1"
+  },
+  {
+    "name": "pforgot___es",
+    "path": "/es/pforgot",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/pforgot.vue",
+    "chunkName": "pages/pforgot",
+    "_name": "_19c20755"
+  },
+  {
+    "name": "register___es",
+    "path": "/es/register",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/register.vue",
+    "chunkName": "pages/register",
+    "_name": "_dd47b35e"
+  },
+  {
+    "name": "resetpassword-token___es",
+    "path": "/es/resetpassword/:token?",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/resetpassword/_token.vue",
+    "chunkName": "pages/resetpassword/_token",
+    "_name": "_5ba4c26d"
   },
   {
     "name": "t-tag___es",
@@ -75,6 +124,13 @@
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/_username/index.vue",
     "chunkName": "pages/_username/index",
     "_name": "_6dd5408c"
+  },
+  {
+    "name": "resetpassword-token___en",
+    "path": "/resetpassword/:token?",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/resetpassword/_token.vue",
+    "chunkName": "pages/resetpassword/_token",
+    "_name": "_5ba4c26d"
   },
   {
     "name": "t-tag___en",
