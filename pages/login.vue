@@ -6,30 +6,45 @@
           <NavLogin />
         </div>
       </div>
-      <div class="login-container px-8 pt-6 pb-10 w-full">
-        <h5 class="font-bold text-xl mb-3">Login</h5>
+      <form class="login-container px-8 pt-6 pb-10 w-full">
+        <h5 class="font-bold text-xl mb-3">
+          Login <span class="text-red-500">{{ isFormValid }}</span>
+        </h5>
         <div class="mb-4">
           <input
+            v-model="form.email"
+            @blur="$v.form.email.$touch()"
             type="text"
             class="bg-info px-2 py-2 outline-none rounded w-full"
-            placeholder="Email"
+            placeholder="Your Email"
           />
-          <p class="text-red-700 italic leading-tight text-xs mt-1">
-            The password should be at least twelve characters long. To make it
-            stronger, use upper and lower case letters, numbers, and symbols
-            like
+          <p
+            v-if="$v.form.email.$error"
+            class="text-red-700 italic leading-tight text-xs mt-1"
+          >
+            <span v-if="$v.form.email.$error"> Email invalid </span>
+            <span v-if="$v.form.email.email"> Email is required </span>
           </p>
         </div>
         <div class="mb-8">
           <input
-            type="text"
+            v-model="form.password"
+            @blur="$v.form.password.$touch()"
+            type="password"
             class="bg-info px-2 py-2 outline-none rounded w-full"
-            placeholder="Password"
+            placeholder="Your Password"
           />
+          <p
+            v-if="$v.form.password.$error"
+            class="text-red-700 italic leading-tight text-xs mt-1"
+          >
+            <span v-if="!$v.form.password.required">
+              Password is required
+            </span>
+          </p>
         </div>
-        <!-- <button class="button text-center w-full bg-secondary text-white py-4 rounded transition duration-300">Login</button> -->
-        <button class="button focus:outline-none">
-          <fa icon="spinner" size="lg" pulse />
+        <button class="button focus:outline-none" @click.prevent="login">
+          <fa v-if="spinner" icon="spinner" size="lg" pulse />
           Login
         </button>
         <div class="forgot-password mt-3 italic leading-tight text-xs">
@@ -37,18 +52,79 @@
           <nuxt-link
             to="/pforgot"
             class="transition duration-200 hover:text-black underline"
-            >Forgot Password</nuxt-link
-          >
+            >Forgot Password
+          </nuxt-link>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </template>
 <script>
+import { required, email } from 'vuelidate/lib/validators'
 import NavLogin from '@/components/NavLogin.vue'
 export default {
   components: {
     NavLogin
+  },
+  data() {
+    return {
+      form: {
+        email: null,
+        password: null
+      },
+      spinner: false
+    }
+  },
+  validations: {
+    form: {
+      email: {
+        email,
+        required
+      },
+      password: {
+        required
+      }
+    }
+  },
+  computed: {
+    isFormValid() {
+      return !this.$v.$invalid
+    }
+  },
+  methods: {
+    login() {
+      this.$v.form.$touch()
+
+      if (this.isFormValid) {
+        this.spinner = true
+        this.$store
+          .dispatch('auth/login', this.form)
+          .then(() => {
+            this.getAuthUser()
+            this.$router.push('/article')
+            this.form.email = null
+            this.form.password = null
+            this.spinner = false
+          })
+          .catch((e) => {
+            this.$swal({
+              icon: 'error',
+              title: e,
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true
+            })
+          })
+      }
+    },
+    getAuthUser() {
+      const token = localStorage.getItem('token')
+      this.$store
+        .dispatch('auth/getAuthUser', { headers: { Authorization: token } })
+        .catch(() => console.log('No autenticado'))
+    }
   }
 }
 </script>

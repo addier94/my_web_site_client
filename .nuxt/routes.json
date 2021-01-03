@@ -3,168 +3,156 @@
     "name": "alltags___en",
     "path": "/alltags",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/alltags.vue",
-    "chunkName": "pages/alltags",
-    "_name": "_3c21fd08"
+    "chunkName": "pages/alltags"
   },
   {
     "name": "article___en",
     "path": "/article",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/article.vue",
-    "chunkName": "pages/article",
-    "_name": "_38ad9b38"
+    "chunkName": "pages/article"
   },
   {
     "name": "index___es",
     "path": "/es",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_22ec4b94"
+    "chunkName": "pages/index"
   },
   {
     "name": "featured___en",
     "path": "/featured",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/featured.vue",
-    "chunkName": "pages/featured",
-    "_name": "_3f711e5c"
+    "chunkName": "pages/featured"
   },
   {
     "name": "login___en",
     "path": "/login",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/login.vue",
-    "chunkName": "pages/login",
-    "_name": "_26d822aa"
+    "chunkName": "pages/login"
   },
   {
     "name": "nuxt___en",
     "path": "/nuxt",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/nuxt.vue",
-    "chunkName": "pages/nuxt",
-    "_name": "_745b49b1"
+    "chunkName": "pages/nuxt"
   },
   {
     "name": "pforgot___en",
     "path": "/pforgot",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/pforgot.vue",
-    "chunkName": "pages/pforgot",
-    "_name": "_19c20755"
+    "chunkName": "pages/pforgot"
   },
   {
     "name": "register___en",
     "path": "/register",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/register.vue",
-    "chunkName": "pages/register",
-    "_name": "_dd47b35e"
+    "chunkName": "pages/register"
   },
   {
     "name": "alltags___es",
     "path": "/es/alltags",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/alltags.vue",
-    "chunkName": "pages/alltags",
-    "_name": "_3c21fd08"
+    "chunkName": "pages/alltags"
   },
   {
     "name": "article___es",
     "path": "/es/article",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/article.vue",
-    "chunkName": "pages/article",
-    "_name": "_38ad9b38"
+    "chunkName": "pages/article"
   },
   {
     "name": "featured___es",
     "path": "/es/featured",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/featured.vue",
-    "chunkName": "pages/featured",
-    "_name": "_3f711e5c"
+    "chunkName": "pages/featured"
   },
   {
     "name": "login___es",
     "path": "/es/login",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/login.vue",
-    "chunkName": "pages/login",
-    "_name": "_26d822aa"
+    "chunkName": "pages/login"
   },
   {
     "name": "nuxt___es",
     "path": "/es/nuxt",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/nuxt.vue",
-    "chunkName": "pages/nuxt",
-    "_name": "_745b49b1"
+    "chunkName": "pages/nuxt"
   },
   {
     "name": "pforgot___es",
     "path": "/es/pforgot",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/pforgot.vue",
-    "chunkName": "pages/pforgot",
-    "_name": "_19c20755"
+    "chunkName": "pages/pforgot"
   },
   {
     "name": "register___es",
     "path": "/es/register",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/register.vue",
-    "chunkName": "pages/register",
-    "_name": "_dd47b35e"
+    "chunkName": "pages/register"
   },
   {
     "name": "resetpassword-token___es",
     "path": "/es/resetpassword/:token?",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/resetpassword/_token.vue",
-    "chunkName": "pages/resetpassword/_token",
-    "_name": "_5ba4c26d"
+    "chunkName": "pages/resetpassword/_token"
   },
   {
     "name": "t-tag___es",
     "path": "/es/t/:tag?",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/t/_tag.vue",
-    "chunkName": "pages/t/_tag",
-    "_name": "_2ac85b44"
+    "chunkName": "pages/t/_tag"
+  },
+  {
+    "name": "user-username___es",
+    "path": "/es/user/:username?",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/user/_username.vue",
+    "chunkName": "pages/user/_username"
   },
   {
     "name": "username___es",
     "path": "/es/:username",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/_username/index.vue",
-    "chunkName": "pages/_username/index",
-    "_name": "_6dd5408c"
+    "chunkName": "pages/_username/index"
   },
   {
     "name": "resetpassword-token___en",
     "path": "/resetpassword/:token?",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/resetpassword/_token.vue",
-    "chunkName": "pages/resetpassword/_token",
-    "_name": "_5ba4c26d"
+    "chunkName": "pages/resetpassword/_token"
   },
   {
     "name": "t-tag___en",
     "path": "/t/:tag?",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/t/_tag.vue",
-    "chunkName": "pages/t/_tag",
-    "_name": "_2ac85b44"
+    "chunkName": "pages/t/_tag"
+  },
+  {
+    "name": "user-username___en",
+    "path": "/user/:username?",
+    "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/user/_username.vue",
+    "chunkName": "pages/user/_username"
   },
   {
     "name": "username-article___es",
     "path": "/es/:username/:article",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/_username/_article.vue",
-    "chunkName": "pages/_username/_article",
-    "_name": "_4937737f"
+    "chunkName": "pages/_username/_article"
   },
   {
     "name": "index___en",
     "path": "/",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_22ec4b94"
+    "chunkName": "pages/index"
   },
   {
     "name": "username___en",
     "path": "/:username",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/_username/index.vue",
-    "chunkName": "pages/_username/index",
-    "_name": "_6dd5408c"
+    "chunkName": "pages/_username/index"
   },
   {
     "name": "username-article___en",
     "path": "/:username/:article",
     "component": "/home/alfredo/code/my_web_site/my_web_site_client/pages/_username/_article.vue",
-    "chunkName": "pages/_username/_article",
-    "_name": "_4937737f"
+    "chunkName": "pages/_username/_article"
   }
 ]

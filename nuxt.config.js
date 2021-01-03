@@ -35,7 +35,8 @@ export default {
     '~/plugins/vue-placeholders.js',
     '~/plugins/vue-observe-visibility.client.js',
     '~/plugins/fontawesome.js',
-    '~/plugins/tooltip.js'
+    '~/plugins/tooltip.js',
+    { src: '~/plugins/vuelidate' },
   ],
   buildModules: [
     '@nuxtjs/eslint-module',
@@ -43,7 +44,17 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/tailwindcss',
   ],
-  modules: ['nuxt-ackee', ['nuxt-i18n', I18N]],
+  modules: [
+    'nuxt-ackee',
+    ['nuxt-i18n', I18N],
+    '@nuxtjs/axios',
+    [
+      'vue-sweetalert2/nuxt',
+    ],
+  ],
+  axios: {
+    baseURL: process.env.BASE_URL || 'http://localhost:5000'
+  },
   ackee: {
     server: 'https://ackee.nuxtjs.com',
     domainId: '6336379b-8d3e-4069-9d2e-897be6a7ed4e'

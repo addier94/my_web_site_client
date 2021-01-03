@@ -13,6 +13,7 @@ const _19c20755 = () => interopDefault(import('../pages/pforgot.vue' /* webpackC
 const _dd47b35e = () => interopDefault(import('../pages/register.vue' /* webpackChunkName: "pages/register" */))
 const _5ba4c26d = () => interopDefault(import('../pages/resetpassword/_token.vue' /* webpackChunkName: "pages/resetpassword/_token" */))
 const _2ac85b44 = () => interopDefault(import('../pages/t/_tag.vue' /* webpackChunkName: "pages/t/_tag" */))
+const _3af87dc2 = () => interopDefault(import('../pages/user/_username.vue' /* webpackChunkName: "pages/user/_username" */))
 const _6dd5408c = () => interopDefault(import('../pages/_username/index.vue' /* webpackChunkName: "pages/_username/index" */))
 const _4937737f = () => interopDefault(import('../pages/_username/_article.vue' /* webpackChunkName: "pages/_username/_article" */))
 
@@ -101,6 +102,10 @@ export const routerOptions = {
     component: _2ac85b44,
     name: "t-tag___es"
   }, {
+    path: "/es/user/:username?",
+    component: _3af87dc2,
+    name: "user-username___es"
+  }, {
     path: "/es/:username",
     component: _6dd5408c,
     name: "username___es"
@@ -112,6 +117,10 @@ export const routerOptions = {
     path: "/t/:tag?",
     component: _2ac85b44,
     name: "t-tag___en"
+  }, {
+    path: "/user/:username?",
+    component: _3af87dc2,
+    name: "user-username___en"
   }, {
     path: "/es/:username/:article",
     component: _4937737f,

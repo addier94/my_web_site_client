@@ -13,6 +13,8 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
+import nuxt_plugin_vuesweetalert2_4f3b32a1 from 'nuxt_plugin_vuesweetalert2_4f3b32a1' // Source: ./vue-sweetalert2.js (mode: 'client')
+import nuxt_plugin_axios_0150f58a from 'nuxt_plugin_axios_0150f58a' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_pluginrouting_2dfad2fc from 'nuxt_plugin_pluginrouting_2dfad2fc' // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
 import nuxt_plugin_pluginmain_3d0b59f3 from 'nuxt_plugin_pluginmain_3d0b59f3' // Source: ./nuxt-i18n/plugin.main.js (mode: 'all')
 import nuxt_plugin_nuxtackeeclient_741f4df4 from 'nuxt_plugin_nuxtackeeclient_741f4df4' // Source: ./nuxt-ackee.client.js (mode: 'client')
@@ -20,6 +22,7 @@ import nuxt_plugin_vueplaceholders_097931cc from 'nuxt_plugin_vueplaceholders_09
 import nuxt_plugin_vueobservevisibilityclient_42d89e44 from 'nuxt_plugin_vueobservevisibilityclient_42d89e44' // Source: ../plugins/vue-observe-visibility.client.js (mode: 'client')
 import nuxt_plugin_fontawesome_b8db358e from 'nuxt_plugin_fontawesome_b8db358e' // Source: ../plugins/fontawesome.js (mode: 'all')
 import nuxt_plugin_tooltip_a5fff1ec from 'nuxt_plugin_tooltip_a5fff1ec' // Source: ../plugins/tooltip.js (mode: 'all')
+import nuxt_plugin_vuelidate_4345260a from 'nuxt_plugin_vuelidate_4345260a' // Source: ../plugins/vuelidate (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -208,6 +211,14 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
+  if (process.client && typeof nuxt_plugin_vuesweetalert2_4f3b32a1 === 'function') {
+    await nuxt_plugin_vuesweetalert2_4f3b32a1(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_axios_0150f58a === 'function') {
+    await nuxt_plugin_axios_0150f58a(app.context, inject)
+  }
+
   if (typeof nuxt_plugin_pluginrouting_2dfad2fc === 'function') {
     await nuxt_plugin_pluginrouting_2dfad2fc(app.context, inject)
   }
@@ -234,6 +245,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_tooltip_a5fff1ec === 'function') {
     await nuxt_plugin_tooltip_a5fff1ec(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_vuelidate_4345260a === 'function') {
+    await nuxt_plugin_vuelidate_4345260a(app.context, inject)
   }
 
   // Lock enablePreview in context
