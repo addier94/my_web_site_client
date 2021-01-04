@@ -1,5 +1,5 @@
 export const state = () => ({
-  user: null,
+  user: null
 })
 
 export const getters = {
@@ -56,9 +56,19 @@ export const actions = {
         return state.user
       })
       .catch((error) => {
-        console.log('error ', error)
         commit('setAuthUser', null)
         return Promise.reject(error)
+      })
+  },
+  updateNameEmailOfUser({ commit, state }, token) {
+    const { name, email } = state.user.data
+    return this.$axios.$put('/api/v1/auth/updatedetails', { name, email }, token)
+      .then((user) => {
+        console.log('great make request', user)
+        commit('setAuthUser', user)
+        return state.user
+      }).catch((error) => {
+        console.log('error in updateNameEmailOfUser ', error)
       })
   }
 }
@@ -66,5 +76,8 @@ export const actions = {
 export const mutations = {
   setAuthUser(state, user) {
     return state.user = user
+  },
+  setChangeUser(state, { user, resource }) {
+    return state.user.data[resource] = user
   }
 }

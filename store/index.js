@@ -4,7 +4,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export const state = () => ({
-  currentArticle: null
+  currentArticle: null,
+  spinner: false
 })
 
 export const mutations = {
@@ -18,6 +19,5 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit({ commit, dispatch }) {
-
   }
 }
