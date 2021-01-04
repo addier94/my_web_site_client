@@ -71,8 +71,7 @@ export default {
       form: {
         email: null,
         password: null
-      },
-      spinner: false
+      }
     }
   },
   validations: {
@@ -89,6 +88,9 @@ export default {
   computed: {
     isFormValid() {
       return !this.$v.$invalid
+    },
+    spinner() {
+      return this.$store.state.spinner
     }
   },
   methods: {
@@ -96,7 +98,7 @@ export default {
       this.$v.form.$touch()
 
       if (this.isFormValid) {
-        this.spinner = true
+        this.$store.commit('setSpinner', true)
         this.$store
           .dispatch('auth/login', this.form)
           .then(() => {
@@ -105,6 +107,7 @@ export default {
             this.form.email = null
             this.form.password = null
             this.spinner = false
+            this.$store.commit('setSpinner', false)
           })
           .catch((e) => {
             this.$swal({

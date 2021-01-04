@@ -49,10 +49,10 @@ export const actions = {
   },
   getAuthUser({ commit, getters, state }, token) {
     const authUser = getters.authUser;
-    if (authUser && authUser.hasOwnProperty('data')) { return Promise.resolve(authUser) }
+    if (authUser && authUser.hasOwnProperty('email')) { return Promise.resolve(authUser) }
     return this.$axios.$get('/api/v1/auth/me', token)
       .then((user) => {
-        commit('setAuthUser', user)
+        commit('setAuthUser', user.data)
         return state.user
       })
       .catch((error) => {
@@ -61,11 +61,10 @@ export const actions = {
       })
   },
   updateNameEmailOfUser({ commit, state }, token) {
-    const { name, email } = state.user.data
+    const { name, email } = state.user
     return this.$axios.$put('/api/v1/auth/updatedetails', { name, email }, token)
       .then((user) => {
-        console.log('great make request', user)
-        commit('setAuthUser', user)
+        commit('setAuthUser', user.data)
         return state.user
       }).catch((error) => {
         console.log('error in updateNameEmailOfUser ', error)
@@ -77,7 +76,8 @@ export const mutations = {
   setAuthUser(state, user) {
     return state.user = user
   },
-  setChangeUser(state, { user, resource }) {
-    return state.user.data[resource] = user
+  // setItems(state, { resource, items })
+  setChangeUser(state, { resource, item }) {
+    return state.user[resource] = item
   }
 }

@@ -48,7 +48,7 @@
             alt=""
           />
           <div
-            v-if="user && user.hasOwnProperty('data')"
+            v-if="user && user.hasOwnProperty('email')"
             :class="[toogleUserNav ? '' : 'hidden']"
             class="bg-elevated-surface-color bl absolute right-0 p-4 rounded-lg cursor-default"
             style="top: 2.5rem"
@@ -59,10 +59,10 @@
               alt=""
             />
             <h5 class="text-center">
-              {{ user.data.name }}
+              {{ user.name }}
             </h5>
             <p class="lowercase text-gray-color leading-4">
-              {{ user.data.email }}
+              {{ user.email }}
             </p>
             <div class="text-center my-4">
               <button
@@ -127,7 +127,7 @@ export default {
         .catch(() => console.log('No autenticado'))
     },
     redirectToUserProfile() {
-      const emailLikeSlug = this.user.data.email.split('@')[0]
+      const emailLikeSlug = this.user.email.split('@')[0]
       this.$router.push(`/user/${emailLikeSlug}`)
       this.toogleUserNav = false
     }
