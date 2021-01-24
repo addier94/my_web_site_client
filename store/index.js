@@ -5,7 +5,10 @@ Vue.use(Vuex)
 
 export const state = () => ({
   currentArticle: null,
-  spinner: false
+  spinner: {
+    spinner: false,
+    spinnerFor: ''
+  }
 })
 
 export const mutations = {
@@ -15,8 +18,9 @@ export const mutations = {
   setItems(state, { resource, items }) {
     state[resource].items = items
   },
-  setSpinner(state, value) {
-    state.spinner = value
+  setSpinner(state, payload) {
+    state.spinner.spinner = payload.value
+    state.spinner.spinnerFor = payload.spinnerFor
   }
 }
 

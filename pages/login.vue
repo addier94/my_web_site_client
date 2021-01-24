@@ -119,6 +119,7 @@ export default {
               timer: 3000,
               timerProgressBar: true
             })
+            this.$store.commit('setSpinner', false)
           })
       }
     },

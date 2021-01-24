@@ -69,7 +69,7 @@ export const actions = {
       }).catch((error) => {
         console.log('error in updateNameEmailOfUser ', error)
       })
-  }
+  },
 }
 
 export const mutations = {
