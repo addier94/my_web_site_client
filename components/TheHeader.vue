@@ -13,7 +13,7 @@
     </nuxt-link>
     <nav>
       <ul>
-        <li>
+        <li class="hidden sm:block">
           <nuxt-link class="link" :to="localePath({ name: 'index' })">{{
             $t('home.name')
           }}</nuxt-link>

@@ -7,9 +7,7 @@
         </div>
       </div>
       <form class="login-container px-8 pt-6 pb-10 w-full">
-        <h5 class="font-bold text-xl mb-3">
-          Login <span class="text-red-500">{{ isFormValid }}</span>
-        </h5>
+        <h5 class="font-bold text-xl mb-3">Login</h5>
         <div class="mb-4">
           <input
             v-model="form.email"
@@ -44,7 +42,12 @@
           </p>
         </div>
         <button class="button focus:outline-none" @click.prevent="login">
-          <fa v-if="spinner" icon="spinner" size="lg" pulse />
+          <fa
+            v-if="spinner && spinnerFor === 'login'"
+            icon="spinner"
+            size="lg"
+            pulse
+          />
           Login
         </button>
         <div class="forgot-password mt-3 italic leading-tight text-xs">
@@ -85,20 +88,12 @@ export default {
       }
     }
   },
-  computed: {
-    isFormValid() {
-      return !this.$v.$invalid
-    },
-    spinner() {
-      return this.$store.state.spinner
-    }
-  },
   methods: {
     login() {
       this.$v.form.$touch()
 
       if (this.isFormValid) {
-        this.$store.commit('setSpinner', true)
+        this.toggleSpinner('login', true)
         this.$store
           .dispatch('auth/login', this.form)
           .then(() => {
@@ -106,28 +101,13 @@ export default {
             this.$router.push('/article')
             this.form.email = null
             this.form.password = null
-            this.spinner = false
-            this.$store.commit('setSpinner', false)
+            this.toggleSpinner('login', false)
           })
           .catch((e) => {
-            this.$swal({
-              icon: 'error',
-              title: e,
-              toast: true,
-              position: 'top-end',
-              showConfirmButton: false,
-              timer: 3000,
-              timerProgressBar: true
-            })
-            this.$store.commit('setSpinner', false)
+            this.swalAlert('error', e)
+            this.toggleSpinner('login', false)
           })
       }
-    },
-    getAuthUser() {
-      const token = localStorage.getItem('token')
-      this.$store
-        .dispatch('auth/getAuthUser', { headers: { Authorization: token } })
-        .catch(() => console.log('No autenticado'))
     }
   }
 }

@@ -12,12 +12,12 @@ export default {
   about: {
     name: "About",
     historia: "History",
-    historia_p1: "I am Alfredo Fernández, I spent the last years working in technology for companies as a 'freelancer', where I perfected my trade as a software engineer",
+    historia_p1: "I am Alfredo Fernández, I spent the last years working in technology as a 'freelancer', where I perfected my trade as a software engineer",
 
     historia_p2: "I have worked in 'backend' and 'frontend' technologies, although lately I have focused more on 'front', currently I am still a 'freelancer'.",
-    historia_p3: "I love technology communities and I always seek to update myself as I enjoy doing this and at the same time continue to grow professionally.",
+    historia_p3: "I love tech communities and I'm always looking to update myself as I enjoy doing this. You can follow me on my personal GitHub account and you can find my personal work that I do in open source.",
     frase: "Sentence",
-    frase_explicacion: "When you learn to code, you hardly ever get what you want the first time. Learning to be a master programmer is learning to be skilled at locating and correcting 'bugs'. The question to ask about software is not whether it is right or wrong, but whether it can be fixed.",
+    frase_explicacion: "Learning to be a master programmer is learning to be skilled at locating and correcting 'bugs'. The question to ask about software is not whether it is right or wrong, but whether it can be fixed.",
     habilidades: "Skill | Skills"
   },
   contact: {

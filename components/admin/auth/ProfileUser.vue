@@ -114,6 +114,7 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
+  name: 'ProfileUser',
   data() {
     return {
       currentPassword: '',
@@ -163,35 +164,13 @@ export default {
         })
         .catch((e) => {
           this.cleanInput()
-          this.swalAlert('error', e)
+          this.swalAlert('error', e.response.data.error)
           this.toggleSpinner('changePassword', false)
         })
-    },
-    token() {
-      return {
-        headers: { Authorization: localStorage.getItem('token') }
-      }
     },
     cleanInput() {
       this.currentPassword = ''
       this.newPassword = ''
-    },
-    toggleSpinner(spinnerFor, value) {
-      this.$store.commit('setSpinner', {
-        spinnerFor: spinnerFor,
-        value: value
-      })
-    },
-    swalAlert(type, message) {
-      this.$swal({
-        icon: type,
-        title: message,
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true
-      })
     }
   }
 }

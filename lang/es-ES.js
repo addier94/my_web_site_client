@@ -12,12 +12,12 @@ export default {
   about: {
     name: "Sobre mi",
     historia: "Historia",
-    historia_p1: "Soy Alfredo Fernández, Pasé los últimos años trabajando en tecnología para empresas como 'freelancer' , donde perfeccioné mi oficio como ingeniero de software",
+    historia_p1: "Soy Alfredo Fernández, Pasé los últimos años trabajando en tecnología como 'freelancer' , donde perfeccioné mi oficio como ingeniero de software",
 
     historia_p2: "He trabajado en tecnologías de 'backend' y 'frontend', aunque últimamente me he enfocado más en 'front', actualmente sigo siendo 'freelancer'.",
-    historia_p3: "Amo las comunidades tecnológicas y siempre busco actualizarme ya que disfruto haciendo esto y al mismo tiempo seguir creciendo profesionalmente.",
+    historia_p3: "Amo las comunidades tecnológicas y siempre busco actualizarme ya que disfruto haciendo esto. Pueden seguirme en mi cuenta personal de GitHub pueden encontrar mi trabajo personal que realizo en open source.",
     frase: "Frase",
-    frase_explicacion: "Cuando aprendes a programar casi nunca obtienes lo que quieres la primera vez. Aprender a ser un maestro programador es aprender a ser diestro en localizar y corregir 'bugs'. La pregunta que debe hacerse sobre un software no es si está bien o está mal, sino si es que éste puede ser corregido.",
+    frase_explicacion: "Aprender a ser un maestro programador es aprender a ser diestro en localizar y corregir 'bugs'. La pregunta que debe hacerse sobre un software no es si está bien o está mal, sino si es que éste puede ser corregido.",
     habilidades: "Habilidad | Habilidades"
   },
   contact: {

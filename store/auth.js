@@ -26,23 +26,25 @@ export const actions = {
       })
       .catch(error => Promise.reject(error))
   },
-
-  logout({ commit }) {
-    return this.$axios.$get('/api/v1/auth/logout')
-      .then(() => {
-        commit('setAuthUser', null)
-        localStorage.removeItem('token')
-        return true
-      })
-      .catch(error => Promise.reject(error))
-  },
-
   register(_, registerData) {
     return this.$axios.$post('/api/v1/auth/register', registerData)
+      .then((response) => {
+        localStorage.setItem('token', `Bearer ${response.token}`)
+      })
       .catch(error => {
         let errorMessage = 'Ooops, error inesperado intenta registrarte de nuevo'
-        if (error.response.data.errors) {
-          errorMessage = error.response.data.errors.message
+        if (error.response.data.error) {
+          errorMessage = error.response.data.error
+        }
+        return Promise.reject(errorMessage)
+      })
+  },
+  forgotpassword(_, email) {
+    return this.$axios.$post('/api/v1/auth/forgotpassword', { email })
+      .catch(error => {
+        let errorMessage = 'The email was not found'
+        if (error.response.data.error) {
+          errorMessage = error.response.data.error
         }
         return Promise.reject(errorMessage)
       })
@@ -64,11 +66,25 @@ export const actions = {
     const { name, email } = state.user
     return this.$axios.$put('/api/v1/auth/updatedetails', { name, email }, token)
       .then((user) => {
+        debugger
         commit('setAuthUser', user.data)
         return state.user
       }).catch((error) => {
-        console.log('error in updateNameEmailOfUser ', error)
+        let errorMessage = 'Was error in updating'
+        if (error.response.data.error) {
+          errorMessage = error.response.data.error
+        }
+        return Promise.reject(errorMessage)
       })
+  },
+  logout({ commit }) {
+    return this.$axios.$get('/api/v1/auth/logout')
+      .then(() => {
+        commit('setAuthUser', null)
+        localStorage.removeItem('token')
+        return true
+      })
+      .catch(error => Promise.reject(error))
   },
 }
 
