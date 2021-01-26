@@ -1,5 +1,7 @@
 <template>
-  <div class="min-h-screen flex items-center top-0 left-0 fixed z-50">
+  <div
+    class="min-h-screen hidden md:flex md:items-center md:top-0 md:left-0 md:fixed md:z-50"
+  >
     <div class="nav-height bg-green-100 z-50">
       <a :class="{ active: active === 'home' }" @click="navigateTo('home')">
         <HomeIcon class="w-8 h-8 md:w-10 md:h-10" />

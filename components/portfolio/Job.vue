@@ -3,52 +3,13 @@
     <h2 class="mb-8 text-center text-3xl">Alguno de mis trabajos</h2>
 
     <div class="article-cards-wrapper flex flex-wrap items-start">
-      <!-- <article>
-        <v-popover offset="16" trigger="hover" placement="right-start">
-          <job-card />
-          <template slot="popover">
-            <job-card-tooltip
-              title="course.title"
-              subtitle="course.category.name"
-              description="course.subtitle"
-              wsl="course.wsl"
-            />
-          </template>
-        </v-popover>
-      </article>
-      <article>
-        <v-popover offset="16" trigger="hover" placement="right-start">
-          <job-card />
-          <template slot="popover">
-            <job-card-tooltip
-              title="course.title"
-              subtitle="course.category.name"
-              description="course.subtitle"
-              wsl="course.wsl"
-            />
-          </template>
-        </v-popover>
-      </article>
-      <article>
-        <v-popover offset="16" trigger="hover" placement="right-start">
-          <job-card />
-          <template slot="popover">
-            <job-card-tooltip
-              title="course.title"
-              subtitle="course.category.name"
-              description="course.subtitle"
-              wsl="course.wsl"
-            />
-          </template>
-        </v-popover>
-      </article> -->
       <article v-for="item of resources" :key="item.title">
         <v-popover offset="16" trigger="hover" placement="right-start">
           <job-card :project="item.project" />
           <template slot="popover">
             <job-card-tooltip
               :title="item.title"
-              :description="item.descripcion"
+              :description="item.description"
               :frontend="item.frontend"
               :backend="item.backend"
             />
@@ -74,7 +35,7 @@ export default {
         {
           title: 'Meetup',
           description:
-            'La aplicacion se usa para reuniones eventos salas de chat y mucha funcionalidades mas..',
+            'La aplicación se usa para reuniones eventos salas de chat y mucha funcionalidades mas..',
           frontend:
             'El frontend se ha construido con vuejs y css junto a sass y muchos plugis como socket.io, axios, vue-toasted y mucho mas...',
           backend:
@@ -82,7 +43,7 @@ export default {
           project: {
             src: 'afmeetup.herokuapp.jpg',
             name: 'Alfredo Fernandez',
-            project: 'Aplicacion para eventos',
+            project: 'Aplicación para eventos con salas de chat en tiempo real',
             demo: 'https://afmeetup.herokuapp.com/',
             code: 'https://github.com/afreddier/meetups',
             icon: {
@@ -92,16 +53,16 @@ export default {
           }
         },
         {
-          title: 'Pagina personal',
+          title: 'Página web personal con edición de blog',
           description:
             'Es una aplicación para escribir blogs guardar proyectos con una plantilla diferenta para la administración',
           frontend:
-            'En el cliente esta construido con nuxt un framework basado en vuejs',
+            'En el cliente está construido con nuxt un framework basado en vuejs',
           backend: 'En lado del servidor se construye un servicio con nodejs',
           project: {
             src: 'alfredofernandez.herokuapp.jpg',
             name: 'Alfredo Fernandez',
-            project: 'Aplicacion personal con administrador de contenidos',
+            project: 'Aplicación personal con administrador de contenidos',
             demo: 'https://alfredofernandez.herokuapp.com/',
             code: 'https://github.com/afreddier/yourself',
             icon: {
@@ -112,11 +73,11 @@ export default {
         },
         {
           title: 'fernandezalfredo.com mi app personal',
-          description: 'Una aplicacion para escribir articulos',
+          description: 'Una aplicación para escribir artículos',
           frontend:
-            'El cliente esta construido con nuxtjs y la nueva fetch de nuxt con marcadores de tiempo, la informacion se cachea de tal modo sera mas rapido aparte que ya es spa',
+            'El cliente está construido con nuxtjs y fetch de nuxt con marcadores de tiempo, los datos se cachean, de tal modo sera mas rapido aparte que ya es spa',
           backend:
-            'La API esta escrito con nodejs aunque la mayor parte se consume servicios de dev.to',
+            'La API está escrito con nodejs aunque la mayor parte se consume servicios de dev.to',
           project: {
             src: 'fernandezalfredo.jpg',
             name: 'Alfredo Fernandez',
@@ -133,9 +94,9 @@ export default {
         {
           title: 'Sistema de ventas',
           description:
-            'Sistema para control de almacen proveedor de productos controlar empleados de venta, productos con codigo QR etc.',
+            'Sistema para control de almacén proveedor de productos controlar empleados de venta, productos con código QR etc.',
           frontend: 'El cliente se ha construido con vuejs',
-          backend: 'Para el backend se construido una API con node',
+          backend: 'Para el backend se a construido una API con node',
           project: {
             src: 'sistema.jpg',
             name: 'Alfredo Fernandez',

@@ -5,46 +5,44 @@
         class="absolute top-0 left-0 w-full h-full object-cover"
         :src="require(`~/assets/${project.src}`)"
       />
-
-      <!-- src="@/assets/alfre.jpg" -->
       <!-- <img v-else :src="article.social_image" :alt="article.title" /> -->
     </nuxt-link>
     <div class="content">
       <div class="meta text-xs flex items-center mb-2">
-        <nuxt-link to="/" class="mr-1">
+        <nuxt-link to="/afreddier" class="mr-1">
           <img
             class="rounded-full w-10"
             src="https://avatars.githubusercontent.com/u/49920189?s=400&u=ae3e7878a0c9fec541aecb4f0a26cc69672861af&v=4"
           />
         </nuxt-link>
         <div>
-          <nuxt-link to="/" class="user-name text-base">{{
+          <nuxt-link to="/afreddier" class="user-name text-base">{{
             project.name
           }}</nuxt-link>
           <div class="scl flex" v-if="project.icon">
             <span
-              class="flex items-center mr-4"
+              class="flex items-center mr-1"
               v-if="project.icon.vue === 'vue'"
             >
-              <vue-icon class="w-6 h-6" />
+              <vue-icon class="w-4 h-4" />
             </span>
             <span
-              class="flex items-center mr-4"
+              class="flex items-center mr-1"
               v-if="project.icon.nuxt === 'nuxt'"
             >
-              <nuxt-icon class="w-6 h-6" />
+              <nuxt-icon class="w-4 h-4" />
             </span>
             <span
-              class="flex items-center mr-4"
+              class="flex items-center mr-1"
               v-if="project.icon.node === 'node'"
             >
-              <node-icon class="w-10 h-10" />
+              <node-icon class="w-4 h-4" />
             </span>
             <span
-              class="flex items-center mr-4"
+              class="flex items-center mr-1"
               v-if="project.icon.dev_to === 'dev_to'"
             >
-              <dev-to-icon class="w-6 h-6" />
+              <dev-to-icon class="w-4 h-4" />
             </span>
           </div>
         </div>
@@ -57,7 +55,7 @@
           <fa :icon="['fab', 'github']" /> Código
         </a>
         <a target="_blanck" :href="project.demo" class="tag">
-          <fa :icon="['fas', 'external-link-alt']" /> demostración
+          <fa :icon="['fas', 'external-link-alt']" /> demo
         </a>
       </div>
     </div>

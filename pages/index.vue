@@ -1,10 +1,6 @@
 <template>
   <div>
-    <Header
-      class="hidden md:block"
-      :active="whereIs"
-      @scroll="scroll($event)"
-    />
+    <Header :active="whereIs" @scroll="scroll($event)" />
     <div class="max-w-screen-lg -mt-24 mx-auto">
       <Home ref="home" />
       <About ref="about" />

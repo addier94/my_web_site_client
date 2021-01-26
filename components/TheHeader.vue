@@ -1,6 +1,8 @@
 <template>
-  <header>
-    <nuxt-link to="/" class="logo-wrapper hidden sm:block" tag="nav">
+  <header
+    class="max-w-screen-xl my-10 md:my-0 m-auto p-4 h-24 flex items-center justify-between relative z-50"
+  >
+    <nuxt-link to="/" class="logo-wrapper" tag="nav">
       <ul>
         <li>
           <div class="link leading-4 cursor-pointer">
@@ -12,8 +14,8 @@
       <!-- <img class="w-16" src="@/assets/logo.png" alt="Logo" /> -->
     </nuxt-link>
     <nav>
-      <ul>
-        <li class="hidden sm:block">
+      <ul class="flex flex-col md:flex-row md:items-center">
+        <li>
           <nuxt-link class="link" :to="localePath({ name: 'index' })">{{
             $t('home.name')
           }}</nuxt-link>
@@ -137,7 +139,6 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  @apply max-w-screen-xl m-auto p-4 h-24 flex items-center justify-between relative z-50;
   .logo-wrapper {
     margin: 0 0.5rem;
     svg {
@@ -150,7 +151,6 @@ header {
     font-weight: $display-font-weight;
     text-transform: uppercase;
     ul {
-      @apply flex flex-wrap items-center;
       li {
         margin: 0.3rem;
         .link {

@@ -66,7 +66,6 @@ export const actions = {
     const { name, email } = state.user
     return this.$axios.$put('/api/v1/auth/updatedetails', { name, email }, token)
       .then((user) => {
-        debugger
         commit('setAuthUser', user.data)
         return state.user
       }).catch((error) => {
