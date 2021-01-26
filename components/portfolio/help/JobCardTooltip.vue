@@ -7,19 +7,19 @@
           <p class="title is-4">{{ title }}</p>
           <!-- TODO: Course Subtitle -->
           <p class="subtitle is-6">
-            <i>{{ subtitle }}</i>
+            <i>{{ description }}</i>
           </p>
         </div>
       </div>
 
       <!-- TODO: Course Description -->
-      <div class="content">{{ description }} descirpcion sobre popover</div>
+      <div class="content">{{ frontend }}</div>
       <div class="content">
         <ul class="wsl-list">
           <!-- TODO: Iterate wsl -->
-          <li v-for="item in wsl" :key="item.value" class="wsl-item">
-            {{ item.value }}
-          </li>
+          {{
+            backend
+          }}
         </ul>
       </div>
     </div>
@@ -29,9 +29,9 @@
 export default {
   props: {
     title: { required: false, type: String },
-    subtitle: { required: false, type: String },
     description: { required: false, type: String },
-    wsl: { required: false, type: Array }
+    frontend: { required: false, type: String },
+    backend: { required: false, type: String }
   }
 }
 </script>
@@ -40,12 +40,6 @@ export default {
   max-width: 350px;
   .title {
     font-size: 18px;
-  }
-  .wsl-list {
-    margin-left: 13px;
-    .wsl-item {
-      font-size: 13px;
-    }
   }
 }
 </style>
