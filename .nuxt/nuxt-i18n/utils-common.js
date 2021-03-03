@@ -1,5 +1,6 @@
 import Cookie from 'cookie'
 import JsCookie from 'js-cookie'
+import isHTTPS from 'is-https'
 
 /**
  * Parses locales provided from browser through `accept-language` header.
@@ -17,34 +18,37 @@ export const parseAcceptLanguage = input => {
 
 /**
  * Find locale code that best matches provided list of browser locales.
- * @param {string[]} appLocales The user-configured locale codes that are to be matched.
+ * @param {(string[]|Object[])} appLocales The user-configured locale codes that are to be matched.
  * @param {string[]} browserLocales The locales to match against configured.
- * @return {string?}
+ * @return {string|undefined}
  */
 export const matchBrowserLocale = (appLocales, browserLocales) => {
   /** @type {{ code: string, score: number }[]} */
   const matchedLocales = []
 
+  // Normalise appLocales input
+  appLocales = appLocales.map(appLocale => ({
+    code: typeof appLocale === 'string' ? appLocale : appLocale.code,
+    iso: typeof appLocale === 'string' ? appLocale : (appLocale.iso || appLocale.code)
+  }))
+
   // First pass: match exact locale.
   for (const [index, browserCode] of browserLocales.entries()) {
-    const matchedCode = appLocales.find(appCode => appCode.toLowerCase() === browserCode.toLowerCase())
-    if (matchedCode) {
-      matchedLocales.push({ code: matchedCode, score: 1 - index / browserLocales.length })
+    const matchedLocale = appLocales.find(appLocale => appLocale.iso.toLowerCase() === browserCode.toLowerCase())
+    if (matchedLocale) {
+      matchedLocales.push({ code: matchedLocale.code, score: 1 - index / browserLocales.length })
       break
     }
   }
 
   // Second pass: match only locale code part of the browser locale (not including country).
   for (const [index, browserCode] of browserLocales.entries()) {
-    if (browserCode.includes('-')) {
-      // For backwards-compatibility, this is lower-cased before comparing.
-      const languageCode = browserCode.split('-')[0].toLowerCase()
-
-      if (appLocales.includes(languageCode)) {
-        // Deduct a thousandth for being non-exact match.
-        matchedLocales.push({ code: languageCode, score: 0.999 - index / browserLocales.length })
-        break
-      }
+    const languageCode = browserCode.split('-')[0].toLowerCase()
+    const matchedLocale = appLocales.find(appLocale => appLocale.iso.split('-')[0].toLowerCase() === languageCode)
+    if (matchedLocale) {
+      // Deduct a thousandth for being non-exact match.
+      matchedLocales.push({ code: matchedLocale.code, score: 0.999 - index / browserLocales.length })
+      break
     }
   }
 
@@ -60,31 +64,66 @@ export const matchBrowserLocale = (appLocales, browserLocales) => {
     })
   }
 
-  return matchedLocales.length ? matchedLocales[0].code : null
+  return matchedLocales.length ? matchedLocales[0].code : undefined
 }
 
 /**
  * Resolves base URL value if provided as function. Otherwise just returns verbatim.
  * @param {string | function} baseUrl
  * @param {import('@nuxt/types').Context} context
+ * @param {import('../../types').NuxtVueI18n.Locale} localeCode
+ * @param {object} options
  * @return {string}
  */
-export const resolveBaseUrl = (baseUrl, context) => {
+export const resolveBaseUrl = (baseUrl, context, localeCode, { differentDomains, locales, localeDomainKey, localeCodeKey, moduleName }) => {
   if (typeof baseUrl === 'function') {
     return baseUrl(context)
+  }
+
+  if (differentDomains && localeCode) {
+    // Lookup the `differentDomain` origin associated with given locale.
+    const domain = getDomainFromLocale(localeCode, context.req, { locales, localeDomainKey, localeCodeKey, moduleName })
+    if (domain) {
+      return domain
+    }
   }
 
   return baseUrl
 }
 
 /**
+ * Gets the `differentDomain` domain from locale.
+ *
+ * @param {string} localeCode The locale code
+ * @param  {import('connect').IncomingMessage} [req] Request object
+ * @param  {object} options
+ * @return {string | undefined}
+ */
+export const getDomainFromLocale = (localeCode, req, { locales, localeDomainKey, localeCodeKey, moduleName }) => {
+// Lookup the `differentDomain` origin associated with given locale.
+  const lang = locales.find(locale => locale[localeCodeKey] === localeCode)
+  if (lang && lang[localeDomainKey]) {
+    let protocol
+    if (process.server) {
+      protocol = (req && isHTTPS(req)) ? 'https' : 'http'
+    } else {
+      protocol = window.location.protocol.split(':')[0]
+    }
+    return `${protocol}://${lang[localeDomainKey]}`
+  }
+
+  // eslint-disable-next-line no-console
+  console.warn(`[${moduleName}] Could not find domain name for locale ${localeCode}`)
+}
+
+/**
  * Get locale code that corresponds to current hostname
  * @param  {object} locales
  * @param  {object} [req] Request object
- * @param  {{ localDomainKey: string, localeCodeKey: string }} options
+ * @param  {{ localeDomainKey: string, localeCodeKey: string }} options
  * @return {string | null} Locade code found if any
  */
-export const getLocaleDomain = (locales, req, { localDomainKey, localeCodeKey }) => {
+export const getLocaleDomain = (locales, req, { localeDomainKey, localeCodeKey }) => {
   let host = null
 
   if (process.client) {
@@ -94,7 +133,7 @@ export const getLocaleDomain = (locales, req, { localDomainKey, localeCodeKey })
   }
 
   if (host) {
-    const matchingLocale = locales.find(l => l[localDomainKey] === host)
+    const matchingLocale = locales.find(l => l[localeDomainKey] === host)
     if (matchingLocale) {
       return matchingLocale[localeCodeKey]
     }
@@ -102,6 +141,13 @@ export const getLocaleDomain = (locales, req, { localDomainKey, localeCodeKey })
 
   return null
 }
+
+/**
+ * Creates a RegExp for route paths
+ * @param  {string[]} localeCodes
+ * @return {RegExp}
+ */
+export const getLocalesRegex = localeCodes => new RegExp(`^/(${localeCodes.join('|')})(?:/|$)`, 'i')
 
 /**
  * Creates getter for getLocaleFromRoute
@@ -113,8 +159,7 @@ export const createLocaleFromRouteGetter = (localeCodes, { routesNameSeparator, 
   const localesPattern = `(${localeCodes.join('|')})`
   const defaultSuffixPattern = `(?:${routesNameSeparator}${defaultLocaleRouteNameSuffix})?`
   const regexpName = new RegExp(`${routesNameSeparator}${localesPattern}${defaultSuffixPattern}$`, 'i')
-  const regexpPath = new RegExp(`^/${localesPattern}/`, 'i')
-
+  const regexpPath = getLocalesRegex(localeCodes)
   /**
    * Extract locale code from given route:
    * - If route has a name, try to extract locale from it
@@ -212,46 +257,60 @@ export const registerStore = (store, vuex, localeCodes, moduleName) => {
       ...(vuex.syncRouteParams ? { routeParams: {} } : {})
     }),
     actions: {
-      ...(vuex.syncLocale ? {
-        setLocale ({ commit }, locale) {
-          commit('setLocale', locale)
-        }
-      } : {}),
-      ...(vuex.syncMessages ? {
-        setMessages ({ commit }, messages) {
-          commit('setMessages', messages)
-        }
-      } : {}),
-      ...(vuex.syncRouteParams ? {
-        setRouteParams ({ commit }, params) {
-          if (process.env.NODE_ENV === 'development') {
-            validateRouteParams(params, localeCodes, moduleName)
+      ...(vuex.syncLocale
+        ? {
+            setLocale ({ commit }, locale) {
+              commit('setLocale', locale)
+            }
           }
-          commit('setRouteParams', params)
-        }
-      } : {})
+        : {}),
+      ...(vuex.syncMessages
+        ? {
+            setMessages ({ commit }, messages) {
+              commit('setMessages', messages)
+            }
+          }
+        : {}),
+      ...(vuex.syncRouteParams
+        ? {
+            setRouteParams ({ commit }, params) {
+              if (process.env.NODE_ENV === 'development') {
+                validateRouteParams(params, localeCodes, moduleName)
+              }
+              commit('setRouteParams', params)
+            }
+          }
+        : {})
     },
     mutations: {
-      ...(vuex.syncLocale ? {
-        setLocale (state, locale) {
-          state.locale = locale
-        }
-      } : {}),
-      ...(vuex.syncMessages ? {
-        setMessages (state, messages) {
-          state.messages = messages
-        }
-      } : {}),
-      ...(vuex.syncRouteParams ? {
-        setRouteParams (state, params) {
-          state.routeParams = params
-        }
-      } : {})
+      ...(vuex.syncLocale
+        ? {
+            setLocale (state, locale) {
+              state.locale = locale
+            }
+          }
+        : {}),
+      ...(vuex.syncMessages
+        ? {
+            setMessages (state, messages) {
+              state.messages = messages
+            }
+          }
+        : {}),
+      ...(vuex.syncRouteParams
+        ? {
+            setRouteParams (state, params) {
+              state.routeParams = params
+            }
+          }
+        : {})
     },
     getters: {
-      ...(vuex.syncRouteParams ? {
-        localeRouteParams: ({ routeParams }) => locale => routeParams[locale] || {}
-      } : {})
+      ...(vuex.syncRouteParams
+        ? {
+            localeRouteParams: ({ routeParams }) => locale => routeParams[locale] || {}
+          }
+        : {})
     }
   }, { preserveState: !!store.state[vuex.moduleName] })
 }
