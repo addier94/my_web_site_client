@@ -3,7 +3,7 @@
     <h2 class="mb-8 text-center text-3xl">{{ $t('about.name') }}</h2>
     <div class="about-card">
       <div class="about-card--right">
-        <img src="@/assets/alfre3.jpg" alt="ME" />
+        <img src="@/assets/alfre2.jpg" alt="ME" />
       </div>
       <div class="about-card--left">
         <div class="left__content">

@@ -8,7 +8,7 @@
         <div class="home-card--left">
           <img
             class="shadow-normal_shadow relative w-full rounded-2xl md:bottom-0 md:max-h-full"
-            src="@/assets/alfre.jpg"
+            src="@/assets/alfre2.jpg"
             alt="Logo"
           />
         </div>
